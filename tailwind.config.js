@@ -2,7 +2,11 @@
 export default {
   content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        monospace: ['"Courier New"', 'monospace'],
+      },
+    },
   },
   plugins: [],
 }
