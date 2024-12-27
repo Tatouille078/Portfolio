@@ -1,9 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 body {
-  @apply font-monospace;
+  @apply font-montserrat;
+}
+
+h1 {
+  letter-spacing: -5px;
+}
+
+p, .fade-in {
+opacity: 0;
+
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range-start: entry 100px;
+  animation-range-end: 30vh;
 }
 
 .sky {
@@ -11,11 +26,15 @@ body {
   background-image: url("./assets/sky.png");
   height: 100%;
   width: 100%;
-  background-size: 150%;
+  background-size: 200%;
   background-position: center;
   opacity: 0.5;
   pointer-events: none;
   filter: contrast(120%) brightness(80%);
+  
+  animation: sky linear forwards;
+  animation-timeline: view();
+  animation-range-start: entry;
 }
 
 .sky::before {
@@ -27,4 +46,59 @@ body {
   height: 8rem;
   background: linear-gradient(to bottom, #2e2e32 , rgba(255, 255, 255, 0));
   pointer-events: none;
+
+  animation: imgBorder linear forwards;
+  animation-timeline: view();
+  animation-range-start: exit -100px;
+}
+
+.arrowDown {
+  position: absolute;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: whitesmoke;
+  z-index: 10;
+
+  animation: arrowDown 2s ease-in-out infinite forwards;
+}
+
+.montserrat-400 {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes sky {
+  to { 
+    background-size: 175%;
+    background-position: top;
+    filter: contrast(130%) brightness(70%);
+  }
+}
+
+@keyframes imgBorder {
+  to {
+    height: 0rem;
+  }
+}
+
+@keyframes arrowDown {
+  0%, 30% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  50%, 80% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
 }
