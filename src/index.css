@@ -3,7 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   @apply font-montserrat;
 }
@@ -12,13 +11,38 @@ h1 {
   letter-spacing: -5px;
 }
 
+section {
+  min-height: 100vh;
+  width: 100vw;
+}
+
 p, .fade-in {
-opacity: 0;
+  opacity: 0;
 
   animation: fade-in linear forwards;
   animation-timeline: view();
-  animation-range-start: entry 100px;
-  animation-range-end: 30vh;
+  animation-range-start: entry;
+  animation-range-end: 45vh;
+}
+
+.fade-right {
+  opacity: 0;
+
+  animation: fade-right linear forwards;
+  animation-timeline: view();
+  animation-range-start: entry;
+  animation-range-end: entry 40vh;
+  animation-duration: 3s;
+}
+
+.fade-left {
+  opacity: 0;
+
+  animation: fade-left linear forwards;
+  animation-timeline: view();
+  animation-range-start: entry;
+  animation-range-end: entry 40vh;
+  animation-duration: 3s;
 }
 
 .sky {
@@ -26,7 +50,7 @@ opacity: 0;
   background-image: url("./assets/sky.png");
   height: 100%;
   width: 100%;
-  background-size: 200%;
+  background-size: 250%;
   background-position: center;
   opacity: 0.5;
   pointer-events: none;
@@ -43,13 +67,13 @@ opacity: 0;
   top: 0;
   left: 0;
   width: 100%;
-  height: 8rem;
+  height: 16rem;
   background: linear-gradient(to bottom, #2e2e32 , rgba(255, 255, 255, 0));
   pointer-events: none;
 
   animation: imgBorder linear forwards;
   animation-timeline: view();
-  animation-range-start: exit -100px;
+  animation-range-start: exit -250px;
 }
 
 .arrowDown {
@@ -60,6 +84,18 @@ opacity: 0;
   z-index: 10;
 
   animation: arrowDown 2s ease-in-out infinite forwards;
+}
+
+.arrow1 {
+  animation-delay: 3150ms;
+}
+
+.arrow2 {
+  animation-delay: 3075ms;
+}
+
+.arrow3 {
+  animation-delay: 3000ms;
 }
 
 .montserrat-400 {
@@ -74,11 +110,33 @@ opacity: 0;
   to { opacity: 1; }
 }
 
+@keyframes fade-left {
+  from { 
+    opacity: 0;
+    transform: translateX(80px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-right {
+  from { 
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes sky {
   to { 
     background-size: 175%;
     background-position: top;
-    filter: contrast(130%) brightness(70%);
+    filter: contrast(140%) brightness(70%);
   }
 }
 
@@ -89,7 +147,7 @@ opacity: 0;
 }
 
 @keyframes arrowDown {
-  0%, 30% {
+  0%, 20% {
     transform: translateY(-40px);
     opacity: 0;
   }
