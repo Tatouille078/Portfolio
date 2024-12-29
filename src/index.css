@@ -11,91 +11,18 @@ h1 {
   letter-spacing: -5px;
 }
 
-section {
-  min-height: 100vh;
-  width: 100vw;
+h2 {
+  letter-spacing: -1px;
 }
 
-p, .fade-in {
-  opacity: 0;
+.fade-header {
+  width: 0;
+  gap: 0;
+  border-bottom-width: 2px;
+  color: #18181b;
 
-  animation: fade-in linear forwards;
-  animation-timeline: view();
-  animation-range-start: entry;
-  animation-range-end: 45vh;
-}
-
-.fade-right {
-  opacity: 0;
-
-  animation: fade-right linear forwards;
-  animation-timeline: view();
-  animation-range-start: entry;
-  animation-range-end: entry 40vh;
-  animation-duration: 3s;
-}
-
-.fade-left {
-  opacity: 0;
-
-  animation: fade-left linear forwards;
-  animation-timeline: view();
-  animation-range-start: entry;
-  animation-range-end: entry 40vh;
-  animation-duration: 3s;
-}
-
-.sky {
-  position: absolute;
-  background-image: url("./assets/sky.png");
-  height: 100%;
-  width: 100%;
-  background-size: 250%;
-  background-position: center;
-  opacity: 0.5;
-  pointer-events: none;
-  filter: contrast(120%) brightness(80%);
-  
-  animation: sky linear forwards;
-  animation-timeline: view();
-  animation-range-start: entry;
-}
-
-.sky::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 16rem;
-  background: linear-gradient(to bottom, #2e2e32 , rgba(255, 255, 255, 0));
-  pointer-events: none;
-
-  animation: imgBorder linear forwards;
-  animation-timeline: view();
-  animation-range-start: exit -250px;
-}
-
-.arrowDown {
-  position: absolute;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  color: whitesmoke;
-  z-index: 10;
-
-  animation: arrowDown 2s ease-in-out infinite forwards;
-}
-
-.arrow1 {
-  animation-delay: 3150ms;
-}
-
-.arrow2 {
-  animation-delay: 3075ms;
-}
-
-.arrow3 {
-  animation-delay: 3000ms;
+  animation: fade-header 1s ease-in-out forwards;
+  animation-delay: 1.2s;
 }
 
 .montserrat-400 {
@@ -105,58 +32,10 @@ p, .fade-in {
   font-style: normal;
 }
 
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fade-left {
-  from { 
-    opacity: 0;
-    transform: translateX(80px); 
-  }
+@keyframes fade-header {
   to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fade-right {
-  from { 
-    opacity: 0;
-    transform: translateX(-80px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes sky {
-  to { 
-    background-size: 175%;
-    background-position: top;
-    filter: contrast(140%) brightness(70%);
-  }
-}
-
-@keyframes imgBorder {
-  to {
-    height: 0rem;
-  }
-}
-
-@keyframes arrowDown {
-  0%, 20% {
-    transform: translateY(-40px);
-    opacity: 0;
-  }
-  50%, 80% {
-    transform: translateY(-20px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 0;
+    width: 50vw;
+    gap: 4rem;
+    color: #f1f5f9;
   }
 }

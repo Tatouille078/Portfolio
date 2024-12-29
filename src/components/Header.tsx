@@ -1,22 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { Link, useLocation } from 'react-router-dom';
 
 const Header: React.FC = () => {
 
-  const [isTextEvent, setTextEvent] = useState(false);
+  const location = useLocation();
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setTextEvent(true);
-    }, 1200);
-
-    return () => clearTimeout(timeout); 
-  }, []);
+  const isHomePage = location.pathname === "/";
 
   return (
-    <header className={`flex justify-center items-center min-h-[7vh] text-xl transition-all duration-1000 ${isTextEvent ? 'w-[50vw] gap-16 border-b-2 text-slate-100' : 'w-0 gap-0 motion-reduce:gap-16 motion-reduce:w-[50vw] border-b-2 motion-reduce:text-slate-100 text-zinc-900'}`}>
-      <p>About</p>
-      <p>Contact</p>
-      <p>Projects</p>
+    <header className={`flex justify-center items-center min-h-[7vh] text-xl transition-all gap-12 border-b-2 w-[50vw] ${isHomePage ? "fade-header" : ""}`}>
+      <Link to="/">
+        <div className="relative group flex flex-col w-24 items-center">
+          <p>About</p>
+          <span className="absolute border-b-2 top-6 h-0 transition-all w-0 group-hover:w-full"></span>
+        </div>
+      </Link>
+      <Link to="/contact">
+      <div className="relative group flex flex-col w-24 items-center">
+          <p>Contact</p>
+          <span className="absolute border-b-2 top-6 h-0 transition-all w-0 group-hover:w-full"></span>
+        </div>
+      </Link>
+      <Link to="/projects">
+      <div className="relative group flex flex-col w-24 items-center">
+          <p>Projects</p>
+          <span className="absolute border-b-2 top-6 h-0 transition-all w-0 group-hover:w-full"></span>
+        </div>
+      </Link>
     </header>
   );
 };

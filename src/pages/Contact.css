@@ -1,0 +1,43 @@
+.fade-contact {
+    opacity: 0;
+
+    animation: fade-contact 1s ease-out forwards;
+}
+
+.fade-contact-100 {
+    opacity: 0;
+
+    animation: fade-contact 1s ease-out forwards;
+    animation-delay: 200ms;
+}
+
+.fade-contact-200 {
+    opacity: 0;
+    
+    animation: fade-contact 1s ease-out forwards;
+    animation-delay: 400ms;
+}
+
+.fade-contact-300 {
+    opacity: 0;
+    
+    animation: fade-contact 1s ease-out forwards;
+    animation-delay: 600ms;
+}
+
+.fade-contact-400 {
+    opacity: 0;
+    
+    animation: fade-contact 1s ease-out forwards;
+    animation-delay: 800ms;
+}
+
+@keyframes fade-contact {
+    from {
+        transform: translateX(-80px);
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
