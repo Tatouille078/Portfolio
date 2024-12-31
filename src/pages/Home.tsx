@@ -46,19 +46,23 @@ function Home() {
 
     const scrollDirection = useRef<"down" | "up" | null>(null);
     const isScrolling = useRef(false);
-
-    const disableScroll = () => {
-        document.body.style.overflow = "hidden";
-    };
-
-    const enableScroll = () => {
-        document.body.style.overflow = "";
-    };
+    const inPersoRef = useRef(false);
+    const [persoPosition, setPersoPosition] = useState(0);
+    const [inSchool, setInSchool] = useState(false);
 
     const handleWheel = (event: WheelEvent) => {
         if (isScrolling.current) return;
 
         scrollDirection.current = event.deltaY > 0 ? "down" : "up";
+
+        if (inSchool || inPersoRef.current === true) {
+            if (inSchool === false) {
+                setPersoPosition((prev) => prev + (scrollDirection.current === "down" ? 60 : -60));
+                return;
+            };
+            return;
+        };
+
         isScrolling.current = true;
 
         const scrollAmount = window.innerHeight;
@@ -74,6 +78,24 @@ function Home() {
         }, 500);
     };
 
+    const disableScroll = () => {
+        document.body.style.overflow = "hidden";
+    };
+
+    const enableScroll = () => {
+        document.body.style.overflow = "";
+    };
+
+    const handleMouseEnter = () => {
+        // console.log('Mouse entered');
+        inPersoRef.current = true;
+    };
+
+    const handleMouseLeave = () => {
+        // console.log('Mouse left');
+        inPersoRef.current = false;
+    };
+
     useEffect(() => {
         disableScroll();
         window.addEventListener("wheel", handleWheel);
@@ -81,17 +103,18 @@ function Home() {
         return () => {
             enableScroll();
             window.removeEventListener("wheel", handleWheel);
+
         };
     }, []);
 
     return (
         <>
-            <div className='flex flex-col items-center text-slate-100'>
+            <div className='flex flex-col items-center text-gray-100'>
                 <section className='flex flex-col items-center bg-zinc-900'>
                     <Header />
                     <div className='w-[30vw] mt-[27vh] mb-[293px]'>
-                        <h1 className={`font-monospace hithere text-[6.5rem] mb-4 transition-all duration-1000 ${isTextEvent ? 'translate-y-0' : 'motion-reduce:translate-y-0 translate-y-20'}`} data-value="Hi there," ref={nameRef}>Hi there,</h1>
-                        <h6 className={`text-3xl text-gray-300 flex-wrap transition-all duration-1000 ${isTextEvent ? 'opacity-100 translate-y-0' : 'opacity-0 motion-reduce:opacity-100 motion-reduce:translate-y-0 translate-y-40'}`}>My name is Loïck Devismes, <br /> I'm a web and game developper</h6>
+                        <h1 className={`font-monospace text-[6.5rem] mb-4 transition-all duration-1000 ${isTextEvent ? 'translate-y-0' : 'motion-reduce:translate-y-0 translate-y-20'}`} data-value="Hi there," ref={nameRef}>Hi there,</h1>
+                        <h6 className={`text-3xl text-gray-300 flex-wrap transition-all duration-1000 ${isTextEvent ? 'opacity-100 translate-y-0' : 'opacity-0 motion-reduce:opacity-100 motion-reduce:translate-y-0 translate-y-40'}`}>My name is Loïck Devismes, <br /> I'm a web and game developper.</h6>
                     </div>
                     <div className="relative mb-20 w-5">
                         <IoIosArrowDown className='arrowDown arrow1 opacity-0 motion-reduce:opacity-100 motion-reduce:animate-none' />
@@ -100,21 +123,57 @@ function Home() {
                     </div>
                 </section>
                 <section className='flex flex-col justify-center items-center bg-zinc-900'>
+                    <div className='grid grid-cols-2 w-[80vw] h-[72vh]'>
+                        <div className='flex items-start flex-col'>
+                            <h2 className='text-[68px]'>My projects</h2>
+                            <h3 className='text-2xl text-gray-200 mt-4'>Personnal projects :</h3>
+                            <div className='w-full h-[19vh] mt-2 border-x-2'>
+                                <div onMouseEnter={handleMouseEnter}
+                                    onMouseLeave={handleMouseLeave}
+                                    style={{
+                                        transform: `translateX(${persoPosition}px)`
+                                    }}
+                                    className='h-full border transition-all ease-out'>
+                                </div>
+                            </div>
+                            <h3 className='text-2xl text-gray-200 mt-4'>School projects :</h3>
+                            <div onMouseEnter={() => setInSchool(true)}
+                                onMouseLeave={() => setInSchool(false)}
+                                className='w-full h-[19vh] mt-2 border-l-2'>
+
+                            </div>
+                            <p className='mt-6 text-gray-400'>For more details :</p>
+                            <div className='gap-3 text-lg mt-3 ml-1 text-black outline-gray-600 outline-4 outline rounded-2xl bg-gray-300 py-[2px] px-4'>
+                                <div className='relative flex justify-center hover:cursor-pointer group'>
+                                    <p className='font-semibold'>See my projects in details!</p>
+                                    <span className="absolute border-b-2 border-black top-[23px] h-0 transition-all w-0 group-hover:w-full"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className='flex flex-col justify-center items-center bg-zinc-900'>
                     <div className='w-[70vw] grid grid-cols-2 mb-20'>
                         <div className="mr-16 flex flex-col transition-all duration-1000">
                             <h2 className="self-center text-[68px] mb-8 motion-reduce:animate-none motion-reduce:opacity-100 fade-right">Who Am I?</h2>
                             <p className='text-gray-300 text-xl text-center motion-reduce:animate-none motion-reduce:opacity-100 fade-right'>I'm 21 and studying in web developpement. <br /> Currently living in the western surburbs of Paris. <br /> Making web applications and exploring <br /> game developpement on my free time.</p>
-                            <div className='flex gap-3 justify-center underline items-center mt-8 text-lg text-[#0A66C2] outline-gray-600 outline-4 outline rounded-2xl bg-gray-300 py-[2px] px-4 mx-auto motion-reduce:animate-none motion-reduce:opacity-100 fade-right'>
+                            <div className='flex gap-3 justify-center items-center mt-8 text-lg text-[#0A66C2] outline-gray-600 outline-4 outline rounded-2xl bg-gray-300 py-[2px] px-4 mx-auto motion-reduce:animate-none motion-reduce:opacity-100 fade-right'>
                                 <IoLogoLinkedin className='text-3xl' />
-                                <p className='font-semibold'>My linkedin</p>
+                                <div className="relative group flex flex-col hover:cursor-pointer items-center">
+                                    <p className='font-semibold'>Linkedin</p>
+                                    <span className="absolute border-b-2 border-[#0A66C2] top-[22px] h-0 transition-all w-0 group-hover:w-full"></span>
+                                </div>
                             </div>
                         </div>
                         <div className="ml-16 flex flex-col transition-all duration-1000">
                             <h2 className="text-[68px] text-gray-900 mx-auto self-center outline-4 outline rounded-2xl bg-gray-300 mb-8 px-8 motion-reduce:animation-none fade-left outline-gray-600">Developper</h2>
                             <p className='text-gray-300 text-xl text-center motion-reduce:animation-none fade-left'>Starting my journey in web development <br /> and mastering this field with the help of studies. <br /> Besides studying, I'm also diving into game <br /> development for my futur projects.</p>
-                            <div className='flex gap-3 justify-center underline items-center mt-8 text-lg text-black outline-gray-600 outline-4 outline rounded-2xl bg-gray-300 py-[2px] px-4 mx-auto motion-reduce:animation-none fade-left'>
+                            <div className='flex gap-3 justify-center items-center mt-8 text-lg text-black outline-gray-600 outline-4 outline rounded-2xl bg-gray-300 py-[2px] px-4 mx-auto motion-reduce:animation-none fade-left'>
                                 <IoLogoGithub className='text-3xl' />
-                                <p className='font-semibold'>My Github</p>
+                                <div className="relative group flex flex-col hover:cursor-pointer items-center">
+                                    <p className='font-semibold'>Github</p>
+                                    <span className="absolute border-b-2 border-black top-[22px] h-0 transition-all w-0 group-hover:w-full"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -132,15 +191,15 @@ function Home() {
                             <div className='w-[70vw] grid grid-cols-3 gap-8 mt-40'>
                                 <div className='flex flex-col gap-4 border-r-2 border-gray-300 pr-4 motion-reduce:animation-none fade-in'>
                                     <h3 className='text-4xl text-gray-100 font-medium'>Creative</h3>
-                                    <p className='text-lg text-gray-200'>I'm drawn to all forms of art, constantly learning and experimenting to take my own unique approach. From visual design to storytelling, I embrace each medium as an opportunity to push boundaries and bring fresh ideas to life.</p>
+                                    <p className='text-lg text-gray-200 fade-in'>I'm drawn to all forms of art, constantly learning and experimenting to take my own unique approach. From visual design to storytelling, I embrace each medium as an opportunity to push boundaries and bring fresh ideas to life.</p>
                                 </div>
                                 <div className='flex flex-col gap-4 text-center motion-reduce:animation-none fade-in pb-3'>
                                     <h3 className='text-4xl text-gray-100 font-medium'>Passionated</h3>
-                                    <p className='text-lg text-gray-200'>Since childhood, I was balancing my time between video games and school. Life was harsh at times but gaming was my bubble to pass through it. This passion eventually grew into a career ambition, inspiring me to pursue development and turn my childhood dream into a reality.</p>
+                                    <p className='text-lg text-gray-200 fade-in'>Since childhood, I was balancing my time between video games and school. Life was harsh at times but gaming was my bubble to pass through it. This passion eventually grew into a career ambition, inspiring me to pursue development and turn my childhood dream into a reality.</p>
                                 </div>
                                 <div className='flex flex-col gap-4 text-end border-l-2 border-gray-300 pl-4 motion-reduce:animation-none fade-in'>
                                     <h3 className='text-4xl text-gray-100 font-medium'>Ambitious</h3>
-                                    <p className='text-lg text-gray-200'>I'm always striving to reach new heights, constantly seeking opportunities to <br /> grow and improve. Whether tackling challenges or exploring unexplored territories, I approach every endeavor with determination and a drive to excel.</p>
+                                    <p className='text-lg text-gray-200 fade-in'>I'm always striving to reach new heights, constantly seeking opportunities to <br /> grow and improve. Whether tackling challenges or exploring unexplored territories, I approach every endeavor with determination and a drive to excel.</p>
                                 </div>
                             </div>
                         </div>

@@ -12,19 +12,19 @@ const Header: React.FC = () => {
       <Link to="/">
         <div className="relative group flex flex-col w-24 items-center">
           <p>About</p>
-          <span className="absolute border-b-2 top-6 h-0 transition-all w-0 group-hover:w-full"></span>
+          <span className="absolute border-b-2 top-[26px] h-0 transition-all w-0 group-hover:w-full"></span>
         </div>
       </Link>
       <Link to="/contact">
-      <div className="relative group flex flex-col w-24 items-center">
+        <div className="relative group flex flex-col w-24 items-center">
           <p>Contact</p>
-          <span className="absolute border-b-2 top-6 h-0 transition-all w-0 group-hover:w-full"></span>
+          <span className="absolute border-b-2 top-[26px] h-0 transition-all w-0 group-hover:w-full"></span>
         </div>
       </Link>
       <Link to="/projects">
-      <div className="relative group flex flex-col w-24 items-center">
+        <div className="relative group flex flex-col w-24 items-center">
           <p>Projects</p>
-          <span className="absolute border-b-2 top-6 h-0 transition-all w-0 group-hover:w-full"></span>
+          <span className="absolute border-b-2 top-[26px] h-0 transition-all w-0 group-hover:w-full"></span>
         </div>
       </Link>
     </header>

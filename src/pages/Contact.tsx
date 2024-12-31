@@ -31,12 +31,12 @@ function Contact() {
                             <a href="mailto:loick78.devismes91@gmail.com" className="text-blue-800 flex font-semibold">
                                 <div className="relative group flex flex-col items-center">
                                     <p className='font-semibold'>Mail me</p>
-                                    <span className="absolute border-b-2 border-[#0A66C2] top-6 h-0 transition-all w-0 group-hover:w-full"></span>
+                                    <span className="absolute border-b-2 border-[#5965ec] top-6 h-0 transition-all w-0 group-hover:w-full"></span>
                                 </div>
                             </a>
                         </p>
                     </div>
-                    <div className='flex gap-3 justify-start items-center mt-8 pl-3 text-xl fade-contact-400'>
+                    <div className='flex gap-3 justify-start items-center mt-8 pl-3 text-xl motion-reduce:animate-none fade-contact-400'>
                         <RiEarthFill className='text-sky-300 text-4xl' />
                         <p>Western surburbs of Paris, France</p>
                     </div>
