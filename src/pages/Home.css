@@ -33,6 +33,26 @@ section {
   animation-duration: 3s;
 }
 
+.fade-project-left {
+  opacity: 0;
+
+  animation: fade-left linear forwards;
+  animation-timeline: view();
+  animation-range-start: entry;
+  animation-range-end: entry 23vh;
+  animation-duration: 3s;
+}
+
+.fade-project-right {
+  opacity: 0;
+
+  animation: fade-right linear forwards;
+  animation-timeline: view();
+  animation-range-start: entry;
+  animation-range-end: entry 23vh;
+  animation-duration: 3s;
+}
+
 .sky {
   position: absolute;
   background-image: url("../assets/sky.png");
@@ -91,7 +111,7 @@ section {
   to { opacity: 1; }
 }
 
-@keyframes fade-left {
+@keyframes fade-right {
   from { 
     opacity: 0;
     transform: translateX(80px); 
@@ -102,7 +122,7 @@ section {
   }
 }
 
-@keyframes fade-right {
+@keyframes fade-left {
   from { 
     opacity: 0;
     transform: translateX(-80px);

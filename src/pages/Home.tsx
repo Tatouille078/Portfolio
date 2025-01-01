@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import './Home.css';
 import Header from '../components/Header';
-import { IoIosArrowDown, IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
+import { IoIosArrowDown, IoLogoGithub, IoLogoLinkedin, IoLogoCss3, IoLogoHtml5, IoLogoPython } from "react-icons/io";
+import { RiTailwindCssFill, RiReactjsFill } from "react-icons/ri";
+import { FaJs } from "react-icons/fa";
+import { SiCplusplus, SiGodotengine } from "react-icons/si";
 
 function Home() {
 
@@ -46,20 +49,14 @@ function Home() {
 
     const scrollDirection = useRef<"down" | "up" | null>(null);
     const isScrolling = useRef(false);
-    const inPersoRef = useRef(false);
-    const [persoPosition, setPersoPosition] = useState(0);
-    const [inSchool, setInSchool] = useState(false);
+    const inHorizontalRef = useRef(false);
 
     const handleWheel = (event: WheelEvent) => {
         if (isScrolling.current) return;
 
         scrollDirection.current = event.deltaY > 0 ? "down" : "up";
 
-        if (inSchool || inPersoRef.current === true) {
-            if (inSchool === false) {
-                setPersoPosition((prev) => prev + (scrollDirection.current === "down" ? 60 : -60));
-                return;
-            };
+        if (inHorizontalRef.current === true) {
             return;
         };
 
@@ -88,12 +85,12 @@ function Home() {
 
     const handleMouseEnter = () => {
         // console.log('Mouse entered');
-        inPersoRef.current = true;
+        inHorizontalRef.current = true;
     };
 
     const handleMouseLeave = () => {
         // console.log('Mouse left');
-        inPersoRef.current = false;
+        inHorizontalRef.current = false;
     };
 
     useEffect(() => {
@@ -123,41 +120,109 @@ function Home() {
                     </div>
                 </section>
                 <section className='flex flex-col justify-center items-center bg-zinc-900'>
-                    <div className='grid grid-cols-2 w-[80vw] h-[72vh]'>
-                        <div className='flex items-start flex-col'>
-                            <h2 className='text-[68px]'>My projects</h2>
-                            <h3 className='text-2xl text-gray-200 mt-4'>Personnal projects :</h3>
-                            <div className='w-full h-[19vh] mt-2 border-x-2'>
+                    <div className='grid grid-cols-[3fr_2fr] w-[80vw] h-[72vh]'>
+                        <div className='flex items-start flex-col pr-4'>
+                            <h2 className='text-[68px] fade-left'>My projects</h2>
+                            <h3 className='text-2xl text-gray-200 mt-4 fade-left'>Personnal projects :</h3>
+                            <div className='w-full max-w-[48vw] h-[19vh] mt-2 overflow-x-auto fade-left'>
                                 <div onMouseEnter={handleMouseEnter}
                                     onMouseLeave={handleMouseLeave}
-                                    style={{
-                                        transform: `translateX(${persoPosition}px)`
-                                    }}
-                                    className='h-full border transition-all ease-out'>
+                                    className='h-full transition-all ease-out flex flex-row min-w-max'>
+                                    <div className='w-72 h-auto flex text-center flex-col mx-2'>
+                                        <h3 className='py-1 font-semibold text-xl bg-zinc-700 rounded-t-xl w-full'>Ciel</h3>
+                                        <p className='w-full bg-zinc-800 rounded-b-xl py-1'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ducimus natus eligendi expedita, blablalba blablalba blablalba blablalba blablalba</p>
+                                    </div>
+                                    <div className='w-72 h-auto flex text-center flex-col mx-2'>
+                                        <h3 className='py-1 font-semibold text-xl bg-zinc-700 rounded-t-xl w-full'>Ciel</h3>
+                                        <p className='w-full bg-zinc-800 rounded-b-xl py-1'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ducimus natus eligendi expedita, blablalba blablalba blablalba blablalba blablalba</p>
+                                    </div>
+                                    <div className='w-72 h-auto flex text-center flex-col mx-2'>
+                                        <h3 className='py-1 font-semibold text-xl bg-zinc-700 rounded-t-xl w-full'>Ciel</h3>
+                                        <p className='w-full bg-zinc-800 rounded-b-xl py-1'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ducimus natus eligendi expedita, blablalba blablalba blablalba blablalba blablalba</p>
+                                    </div>
+                                    <div className='w-72 h-auto flex text-center flex-col mx-2'>
+                                        <h3 className='py-1 font-semibold text-xl bg-zinc-700 rounded-t-xl w-full'>Ciel</h3>
+                                        <p className='w-full bg-zinc-800 rounded-b-xl py-1'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ducimus natus eligendi expedita, blablalba blablalba blablalba blablalba blablalba</p>
+                                    </div>
+                                    
                                 </div>
                             </div>
-                            <h3 className='text-2xl text-gray-200 mt-4'>School projects :</h3>
-                            <div onMouseEnter={() => setInSchool(true)}
-                                onMouseLeave={() => setInSchool(false)}
-                                className='w-full h-[19vh] mt-2 border-l-2'>
-
+                            <h3 className='text-2xl text-gray-200 mt-4 fade-left'>School projects :</h3>
+                            <div className='w-full h-[19vh] mt-2 overflow-x-auto fade-left'>
+                                <div /* onMouseEnter={handleMouseEnter} TO REACTIVATE WHEN MORE THAN 3
+                                    onMouseLeave={handleMouseLeave} */
+                                    className='h-full transition-all ease-out flex flex-row min-w-max'>
+                                    <div className='w-72 h-auto flex text-center flex-col mx-2'>
+                                        <h3 className='py-1 font-semibold text-xl bg-zinc-700 rounded-t-xl w-full'>Ciel</h3>
+                                        <p className='w-full bg-zinc-800 rounded-b-xl py-1'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ducimus natus eligendi expedita, blablalba blablalba blablalba blablalba blablalba</p>
+                                    </div>
+                                </div>
                             </div>
-                            <p className='mt-6 text-gray-400'>For more details :</p>
-                            <div className='gap-3 text-lg mt-3 ml-1 text-black outline-gray-600 outline-4 outline rounded-2xl bg-gray-300 py-[2px] px-4'>
+                            <div className='gap-3 text-lg mt-6 ml-1 text-black outline-gray-600 outline-4 outline rounded-2xl bg-gray-300 py-[2px] px-4 fade-project-left'>
                                 <div className='relative flex justify-center hover:cursor-pointer group'>
                                     <p className='font-semibold'>See my projects in details!</p>
                                     <span className="absolute border-b-2 border-black top-[23px] h-0 transition-all w-0 group-hover:w-full"></span>
                                 </div>
                             </div>
                         </div>
+                        <div className='flex items-end flex-col pl-4'>
+                            <h2 className='text-[68px] fade-right'>Knowledge</h2>
+                            <h3 className='text-2xl text-gray-200 mt-4 fade-right'>Language & library :</h3>
+                            <div className='w-full h-[28vh] mt-2 flex flex-wrap justify-end gap-2 px-2 text-zinc-200 fade-right'>
+                                <div className='w-[18vh] h-[9vh] bg-zinc-700 rounded-xl flex flex-col justify-center items-center text-center gap-2'>
+                                    <IoLogoCss3 className='text-4xl text-[#26A3D8]' />
+                                    <p>CSS</p>
+                                </div>
+                                <div className='w-[18vh] h-[9vh] bg-zinc-700 rounded-xl flex flex-col justify-center items-center text-center gap-2'>
+                                    <IoLogoHtml5 className='text-4xl text-[#E86025]' />
+                                    <p>HTML</p>
+                                </div>
+                                <div className='w-[18vh] h-[9vh] bg-zinc-700 rounded-xl flex flex-col justify-center items-center text-center gap-2'>
+                                    <FaJs className='text-4xl text-[#F7DF1E]' />
+                                    <p>Javascript</p>
+                                </div>
+                                <div className='w-[18vh] h-[9vh] bg-zinc-700 rounded-xl flex flex-col justify-center items-center text-center gap-2'>
+                                    <RiReactjsFill className='text-4xl text-[#5CD3F5]' />
+                                    <p>React</p>
+                                </div>
+                                <div className='w-[18vh] h-[9vh] bg-zinc-700 rounded-xl flex flex-col justify-center items-center text-center gap-2'>
+                                    <RiTailwindCssFill className='text-4xl text-[#38BDF7]' />
+                                    <p>TailwindCSS</p>
+                                </div>
+                                <div className='w-[18vh] h-[9vh] bg-zinc-700 rounded-xl flex flex-col justify-center items-center text-center gap-2'>
+                                    <IoLogoPython className='text-4xl' />
+                                    <p>Python</p>
+                                </div>
+                                <div className='w-[18vh] h-[9vh] bg-zinc-700 rounded-xl flex flex-col justify-center items-center text-center gap-2'>
+                                    <SiCplusplus className='text-4xl text-[#5867B7]' />
+                                    <p>C++ (W.I.P)</p>
+                                </div>
+                            </div>
+                            <h3 className='text-2xl text-gray-200 mt-6 fade-project-right'>Tools :</h3>
+                            <div className='w-full h-[19vh] mt-2 flex flex-wrap justify-end gap-2 px-2 fade-project-right'>
+                                <div className='w-[18vh] h-[9vh] bg-zinc-700 rounded-xl flex flex-col justify-center items-center text-center gap-2'>
+                                    <IoLogoGithub className='text-4xl text-black' />
+                                    <p>Github</p>
+                                </div>
+                                <div className='w-[18vh] h-[9vh] bg-zinc-700 rounded-xl flex flex-col justify-center items-center text-center gap-2'>
+                                    <SiGodotengine className='text-4xl text-[#56a4db]' />
+                                    <p>Godot (W.I.P)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='relative top-[4vh] w-5'>
+                        <IoIosArrowDown className='arrowDown arrow1 motion-reduce:animate-none' />
+                        <IoIosArrowDown className='top-3 arrowDown arrow2 motion-reduce:animate-none' />
+                        <IoIosArrowDown className='top-6 arrowDown arrow3 motion-reduce:animate-none' />
                     </div>
                 </section>
                 <section className='flex flex-col justify-center items-center bg-zinc-900'>
                     <div className='w-[70vw] grid grid-cols-2 mb-20'>
                         <div className="mr-16 flex flex-col transition-all duration-1000">
-                            <h2 className="self-center text-[68px] mb-8 motion-reduce:animate-none motion-reduce:opacity-100 fade-right">Who Am I?</h2>
-                            <p className='text-gray-300 text-xl text-center motion-reduce:animate-none motion-reduce:opacity-100 fade-right'>I'm 21 and studying in web developpement. <br /> Currently living in the western surburbs of Paris. <br /> Making web applications and exploring <br /> game developpement on my free time.</p>
-                            <div className='flex gap-3 justify-center items-center mt-8 text-lg text-[#0A66C2] outline-gray-600 outline-4 outline rounded-2xl bg-gray-300 py-[2px] px-4 mx-auto motion-reduce:animate-none motion-reduce:opacity-100 fade-right'>
+                            <h2 className="self-center text-[68px] mb-8 motion-reduce:animate-none motion-reduce:opacity-100 fade-left">Who Am I?</h2>
+                            <p className='text-gray-300 text-xl text-center motion-reduce:animate-none motion-reduce:opacity-100 fade-left'>I'm 21 and studying in web developpement. <br /> Currently living in the western surburbs of Paris. <br /> Making web applications and exploring <br /> game developpement on my free time.</p>
+                            <div className='flex gap-3 justify-center items-center mt-8 text-lg text-[#0A66C2] outline-gray-600 outline-4 outline rounded-2xl bg-gray-300 py-[2px] px-4 mx-auto motion-reduce:animate-none motion-reduce:opacity-100 fade-left'>
                                 <IoLogoLinkedin className='text-3xl' />
                                 <div className="relative group flex flex-col hover:cursor-pointer items-center">
                                     <p className='font-semibold'>Linkedin</p>
@@ -166,9 +231,9 @@ function Home() {
                             </div>
                         </div>
                         <div className="ml-16 flex flex-col transition-all duration-1000">
-                            <h2 className="text-[68px] text-gray-900 mx-auto self-center outline-4 outline rounded-2xl bg-gray-300 mb-8 px-8 motion-reduce:animation-none fade-left outline-gray-600">Developper</h2>
-                            <p className='text-gray-300 text-xl text-center motion-reduce:animation-none fade-left'>Starting my journey in web development <br /> and mastering this field with the help of studies. <br /> Besides studying, I'm also diving into game <br /> development for my futur projects.</p>
-                            <div className='flex gap-3 justify-center items-center mt-8 text-lg text-black outline-gray-600 outline-4 outline rounded-2xl bg-gray-300 py-[2px] px-4 mx-auto motion-reduce:animation-none fade-left'>
+                            <h2 className="text-[68px] text-gray-900 mx-auto self-center outline-4 outline rounded-2xl bg-gray-300 mb-8 px-8 motion-reduce:animation-none fade-right outline-gray-600">Developper</h2>
+                            <p className='text-gray-300 text-xl text-center motion-reduce:animation-none fade-right'>Starting my journey in web development <br /> and mastering this field with the help of studies. <br /> Besides studying, I'm also diving into game <br /> development for my future projects.</p>
+                            <div className='flex gap-3 justify-center items-center mt-8 text-lg text-black outline-gray-600 outline-4 outline rounded-2xl bg-gray-300 py-[2px] px-4 mx-auto motion-reduce:animation-none fade-right'>
                                 <IoLogoGithub className='text-3xl' />
                                 <div className="relative group flex flex-col hover:cursor-pointer items-center">
                                     <p className='font-semibold'>Github</p>
