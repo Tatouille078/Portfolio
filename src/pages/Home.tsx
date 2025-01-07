@@ -5,6 +5,7 @@ import { IoIosArrowDown, IoLogoGithub, IoLogoLinkedin, IoLogoCss3, IoLogoHtml5, 
 import { RiTailwindCssFill, RiReactjsFill } from "react-icons/ri";
 import { FaJs } from "react-icons/fa";
 import { SiCplusplus, SiGodotengine } from "react-icons/si";
+import ProjectCard from '../components/ProjectCard';
 
 function Home() {
 
@@ -128,23 +129,7 @@ function Home() {
                                 <div onMouseEnter={handleMouseEnter}
                                     onMouseLeave={handleMouseLeave}
                                     className='h-full transition-all ease-out flex flex-row min-w-max'>
-                                    <div className='w-72 h-auto flex text-center flex-col mx-2'>
-                                        <h3 className='py-1 font-semibold text-xl bg-zinc-700 rounded-t-xl w-full'>Ciel</h3>
-                                        <p className='w-full bg-zinc-800 rounded-b-xl py-1'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ducimus natus eligendi expedita, blablalba blablalba blablalba blablalba blablalba</p>
-                                    </div>
-                                    <div className='w-72 h-auto flex text-center flex-col mx-2'>
-                                        <h3 className='py-1 font-semibold text-xl bg-zinc-700 rounded-t-xl w-full'>Ciel</h3>
-                                        <p className='w-full bg-zinc-800 rounded-b-xl py-1'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ducimus natus eligendi expedita, blablalba blablalba blablalba blablalba blablalba</p>
-                                    </div>
-                                    <div className='w-72 h-auto flex text-center flex-col mx-2'>
-                                        <h3 className='py-1 font-semibold text-xl bg-zinc-700 rounded-t-xl w-full'>Ciel</h3>
-                                        <p className='w-full bg-zinc-800 rounded-b-xl py-1'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ducimus natus eligendi expedita, blablalba blablalba blablalba blablalba blablalba</p>
-                                    </div>
-                                    <div className='w-72 h-auto flex text-center flex-col mx-2'>
-                                        <h3 className='py-1 font-semibold text-xl bg-zinc-700 rounded-t-xl w-full'>Ciel</h3>
-                                        <p className='w-full bg-zinc-800 rounded-b-xl py-1'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ducimus natus eligendi expedita, blablalba blablalba blablalba blablalba blablalba</p>
-                                    </div>
-                                    
+                                    <ProjectCard type='perso'/>
                                 </div>
                             </div>
                             <h3 className='text-2xl text-gray-200 mt-4 fade-left'>School projects :</h3>
@@ -152,10 +137,7 @@ function Home() {
                                 <div /* onMouseEnter={handleMouseEnter} TO REACTIVATE WHEN MORE THAN 3
                                     onMouseLeave={handleMouseLeave} */
                                     className='h-full transition-all ease-out flex flex-row min-w-max'>
-                                    <div className='w-72 h-auto flex text-center flex-col mx-2'>
-                                        <h3 className='py-1 font-semibold text-xl bg-zinc-700 rounded-t-xl w-full'>Ciel</h3>
-                                        <p className='w-full bg-zinc-800 rounded-b-xl py-1'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ducimus natus eligendi expedita, blablalba blablalba blablalba blablalba blablalba</p>
-                                    </div>
+                                    <ProjectCard type='school'/>
                                 </div>
                             </div>
                             <div className='gap-3 text-lg mt-6 ml-1 text-black outline-gray-600 outline-4 outline rounded-2xl bg-gray-300 py-[2px] px-4 fade-project-left'>

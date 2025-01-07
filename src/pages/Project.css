@@ -1,0 +1,17 @@
+.project-display {
+    width: 60vw;
+    height: 60vh;
+
+    animation: project-display 2s ease-in-out forwards;
+}
+
+@keyframes project-display {
+    40%, 60% {
+        width: 50px;
+        height: 20px;
+    }
+    100% {
+        width: 60vw;
+        height: 60vh;
+    }
+}

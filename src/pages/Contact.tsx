@@ -2,8 +2,21 @@ import './Contact.css'
 import Header from '../components/Header'
 import { IoLogoGithub, IoLogoLinkedin, IoIosMail } from 'react-icons/io'
 import { RiEarthFill } from "react-icons/ri";
+import { useState } from 'react';
 
 function Contact() {
+
+    const [showTooltip, setShowTooltip] = useState(false);
+
+    const handleCopyToClipboard = async (email: string) => {
+        try {
+            await navigator.clipboard.writeText(email);
+            setShowTooltip(true);
+            setTimeout(() => setShowTooltip(false), 1500);
+        } catch (error) {
+            console.error("Failed to copy email:", error);
+        }
+    };
 
     return (
         <>
@@ -25,23 +38,37 @@ function Contact() {
                             <span className="absolute border-b-2 border-[#0A66C2] top-6 h-0 transition-all w-0 group-hover:w-full"></span>
                         </div>
                     </div>
-                    <div className='flex gap-3 justify-start items-center mt-8 text-xl text-slate-900 outline-gray-600 outline-4 outline rounded-2xl bg-gray-300 py-[3px] pl-3 pr-6 motion-reduce:animation-none fade-contact-300'>
+                    <div className='flex gap-3 justify-start items-center mt-8 text-xl text-gray-900 outline-gray-600 outline-4 outline rounded-2xl bg-gray-300 py-[3px] pl-3 pr-6 motion-reduce:animation-none fade-contact-300'>
                         <IoIosMail className='text-4xl' />
-                        <p className='font-medium flex gap-2'><strong className='font-semibold'>Mail: </strong>loick78.devismes91@gmail.com /
-                            <a href="mailto:loick78.devismes91@gmail.com" className="text-blue-800 flex font-semibold">
-                                <div className="relative group flex flex-col items-center">
-                                    <p className='font-semibold'>Mail me</p>
-                                    <span className="absolute border-b-2 border-[#5965ec] top-6 h-0 transition-all w-0 group-hover:w-full"></span>
+                        <strong className='font-semibold'>Mail: </strong>
+                        <div className="relative group flex flex-col items-center">
+                            <button
+                                onClick={() => handleCopyToClipboard('loick78.devismes91@gmail.com')}
+                                className="text-gray-800 font-semibold"
+                            >
+                                loick78.devismes91@gmail.com
+                            </button>
+                            <span className="absolute border-b-2 border-gray-800 top-6 h-0 transition-all w-0 group-hover:w-full"></span>
+                            {showTooltip && (
+                                <div className="absolute top-[-2rem] bg-gray-700 text-white text-xs rounded px-2 py-1">
+                                    Copied to clipboard!
                                 </div>
-                            </a>
-                        </p>
-                    </div>
-                    <div className='flex gap-3 justify-start items-center mt-8 pl-3 text-xl motion-reduce:animate-none fade-contact-400'>
-                        <RiEarthFill className='text-sky-300 text-4xl' />
-                        <p>Western surburbs of Paris, France</p>
-                    </div>
+                            )}
+                        </div>
+                        /
+                        <a href="mailto:loick78.devismes91@gmail.com" className="text-blue-800 flex font-semibold">
+                            <div className="relative group flex flex-col items-center">
+                                <p className='font-semibold'>Mail me</p>
+                                <span className="absolute border-b-2 border-[#5965ec] top-6 h-0 transition-all w-0 group-hover:w-full"></span>
+                            </div>
+                        </a>
+                </div>
+                <div className='flex gap-3 justify-start items-center mt-8 pl-3 text-xl motion-reduce:animate-none fade-contact-400'>
+                    <RiEarthFill className='text-sky-300 text-4xl' />
+                    <p>Western surburbs of Paris, France</p>
                 </div>
             </div>
+        </div >
         </>
     )
 }

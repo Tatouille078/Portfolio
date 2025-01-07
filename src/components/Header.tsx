@@ -21,7 +21,7 @@ const Header: React.FC = () => {
           <span className="absolute border-b-2 top-[26px] h-0 transition-all w-0 group-hover:w-full"></span>
         </div>
       </Link>
-      <Link to="/projects">
+      <Link to="/project/default">
         <div className="relative group flex flex-col w-24 items-center">
           <p>Projects</p>
           <span className="absolute border-b-2 top-[26px] h-0 transition-all w-0 group-hover:w-full"></span>
