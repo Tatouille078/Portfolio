@@ -55,7 +55,7 @@ section {
 
 .sky {
   position: absolute;
-  background-image: url("../assets/sky.png");
+  background-image: url("../assets/bgg.png");
   height: 100%;
   width: 100%;
   background-size: 250%;

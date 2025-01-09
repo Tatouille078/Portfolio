@@ -11,8 +11,10 @@ const Header: React.FC = () => {
     <header className={`flex justify-center items-center min-h-[7vh] text-xl transition-all gap-12 border-b-2 w-[50vw] ${isHomePage ? "fade-header" : ""}`}>
       <Link to="/">
         <div className="relative group flex flex-col w-24 items-center">
-          <p>About</p>
-          <span className="absolute border-b-2 top-[26px] h-0 transition-all w-0 group-hover:w-full"></span>
+          <p className="z-10 mix-blend-difference text-[#ffd59e]">About</p>
+          <span className="absolute h-7 headerHover1 transition-all w-0 group-hover:w-full group-hover:-translate-x-6 duration-[250ms]"></span>
+          <span className="absolute h-7 headerHover2 transition-all w-0 group-hover:w-full duration-200"></span>
+          <span className="absolute h-7 headerHover3 transition-all w-0 group-hover:w-full group-hover:translate-x-6"></span>
         </div>
       </Link>
       <Link to="/contact">

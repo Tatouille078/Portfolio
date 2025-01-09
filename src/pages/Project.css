@@ -1,17 +1,57 @@
-.project-display {
-    width: 60vw;
-    height: 60vh;
-
-    animation: project-display 2s ease-in-out forwards;
+.transitionObject1, .transitionObject2, .transitionObject3 {
+    position: absolute;
+    inset: 0;
+    top: 20px;
+    height: 65vh;
 }
 
-@keyframes project-display {
-    40%, 60% {
-        width: 50px;
-        height: 20px;
+.transitionObject1 {
+    background-color: antiquewhite;
+    clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
+    width: 150vw;
+
+    animation: transition-project1 1.55s cubic-bezier(0, 0.76, 1, 0.4) forwards;
+}
+
+.transitionObject2 {
+    background-color: rgb(240, 202, 153);
+    clip-path: polygon(0% 0, 100% 0, 90% 100%, 10% 100%);
+    width: 125vw;
+
+    animation: transition-project2 1.425s cubic-bezier(0, 0.76, 1, 0.4) forwards;
+}
+
+.transitionObject3 {
+    background-color: rgb(225, 166, 88);
+    clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
+    width: 100vw;
+
+    animation: transition-project3 1.3s cubic-bezier(0, 0.76, 1, 0.4) forwards;
+}
+
+@keyframes transition-project1 {
+    from {
+        transform: translateX(-190vw);
     }
-    100% {
-        width: 60vw;
-        height: 60vh;
+    to {
+        transform: translateX(80vw);
+    }
+}
+
+@keyframes transition-project2 {
+    from {
+        transform: translateX(-205vw);
+    }
+    to {
+        transform: translateX(80vw);
+    }
+}
+
+@keyframes transition-project3 {
+    from {
+        transform: translateX(-220vw);
+    }
+    to {
+        transform: translateX(80vw);
     }
 }

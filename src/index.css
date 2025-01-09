@@ -15,6 +15,22 @@ h2 {
   letter-spacing: -1px;
 }
 
+.headerHover1 {
+  background-color: antiquewhite;
+  clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
+}
+
+.headerHover2 {
+  background-color: #f0ca99;
+  clip-path: polygon(0% 0, 100% 0, 90% 100%, 10% 100%);
+}
+
+.headerHover3 {
+  background-color: rgb(225, 166, 88);
+  clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
+}
+
+
 .fade-header {
   width: 0;
   gap: 0;
