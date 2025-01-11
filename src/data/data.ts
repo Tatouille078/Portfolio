@@ -4,8 +4,8 @@ export type Project = {
     title: string;
     description: string;
     images: string[];
-    colorBg: string;
-    colorBorder: string;
+    titleColor: string;
+    descColor: string;
     subTitle1?: string;
     subText1?: string;
     subTitle2?: string;
@@ -19,12 +19,12 @@ const projects: Project[] = [
         title: "SkyFlippy",
         description: "A web app for the minecraft sever: Hypixel. It prodigate an interface that sort the best items to flip on the bazaar of the skyblock gamemode.",
         images: ['/src/assets/SkyFlippy.png', '/src/assets/SkyFlippy2.png'],
-        colorBg: "FFF",
-        colorBorder: "FFF",
+        titleColor: "#634960",
+        descColor: "#403244",
         subTitle1: "Technology used",
-        subText1: "this web App based from the Hypixel API has been created using HTML, CSS and the library TailwindCSS. for javascript I'm using the React library.",
+        subText1: "HTML, CSS with Tailwind and Javascript with React",
         subTitle2: "Fonctionnality",
-        subText2: "Based on the bazaar Hypixel API, Skyflippy gives each items available a score with explanation and sort it to expose the best ones to flip on the bazaar in-game."
+        subText2: "Based on the bazaar Hypixel API, It gives each items a score and sort it to expose the best ones to flip on the bazaar."
     },
     {
         id: 2,
@@ -32,8 +32,8 @@ const projects: Project[] = [
         title: "Projet de fin d'étude",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ducimus natus eligendi expedita, blablalba blablalba blablalba blablalba blablalba",
         images: ["project3.jpg", "project4.jpg"],
-        colorBg: "FFF",
-        colorBorder: "FFF",
+        titleColor: "#3f3f46",
+        descColor: "#27272a",
         subTitle1: "Technologies utilisées",
         subText1: "HTML, CSS, JavaScript, React, Next.js",
         subTitle2: "Fonctionnalités",
@@ -45,8 +45,8 @@ const projects: Project[] = [
         title: "Projet de fin d'étude",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ducimus natus eligendi expedita, blablalba blablalba blablalba blablalba blablalba",
         images: ["project3.jpg", "project4.jpg"],
-        colorBg: "FFF",
-        colorBorder: "FFF",
+        titleColor: "#3f3f46",
+        descColor: "#27272a",
         subTitle1: "Technologies utilisées",
         subText1: "HTML, CSS, JavaScript, React, Next.js",
         subTitle2: "Fonctionnalités",
@@ -58,8 +58,8 @@ const projects: Project[] = [
         title: "Projet de fin d'étude",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ducimus natus eligendi expedita, blablalba blablalba blablalba blablalba blablalba",
         images: ["project3.jpg", "project4.jpg"],
-        colorBg: "FFF",
-        colorBorder: "FFF",
+        titleColor: "#3f3f46",
+        descColor: "#27272a",
         subTitle1: "Technologies utilisées",
         subText1: "HTML, CSS, JavaScript, React, Next.js",
         subTitle2: "Fonctionnalités",
@@ -71,8 +71,8 @@ const projects: Project[] = [
         title: "Projet de fin d'étude",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ducimus natus eligendi expedita, blablalba blablalba blablalba blablalba blablalba",
         images: ["project3.jpg", "project4.jpg"],
-        colorBg: "FFF",
-        colorBorder: "FFF",
+        titleColor: "#3f3f46",
+        descColor: "#27272a",
         subTitle1: "Technologies utilisées",
         subText1: "HTML, CSS, JavaScript, React, Next.js",
         subTitle2: "Fonctionnalités",

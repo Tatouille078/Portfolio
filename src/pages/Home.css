@@ -84,6 +84,10 @@ section {
   animation-range-start: exit -500px;
 }
 
+.radialGradient {
+  background: radial-gradient(#0009, #0005, #0002, #0000, #0000);
+}
+
 .arrowDown {
   position: absolute;
   font-size: 1.5rem;

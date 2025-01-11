@@ -1,43 +1,128 @@
-.fade-contact {
-    opacity: 0;
+.transitionContact1 {
+    background: #f0ca99;
+    transform: translateX(-230%);
+    width: 1700px;
+    clip-path: polygon(0% 0, 100% 0, 96% 100%, 5% 100%);
 
-    animation: fade-contact 1s ease-out forwards;
+    animation: transition-contact1 1s cubic-bezier(0, 1, 1, 1) forwards;
 }
 
-.fade-contact-100 {
-    opacity: 0;
+.transitionContact1::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    align-self: center;
+    background: #4b4237;
+    width: 800px;
+    height: 70%;
+    clip-path: polygon(0% 0, 100% 0, 96% 100%, 5% 100%);
 
-    animation: fade-contact 1s ease-out forwards;
+    animation: sub-transition-contact 1s cubic-bezier(0, 1, 1, 1) forwards;
+}
+
+.transitionContact2-1, .transitionContact2-2, .transitionContact2-3 {
+    background: #e3a85b;
+    transform: translateX(-230%);
+    width: 1700px;
+    clip-path: polygon(0% 0, 100% 0, 98% 100%, 3% 100%);
+
+    animation: transition-contact2 1s cubic-bezier(0, 1, 1, 1) forwards;
+}
+
+.transitionContact2-1 {
+    animation-delay: 100ms;
+}
+
+.transitionContact2-1::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    align-self: center;
+    background: #3e3830;
+    width: 966px;
+    height: 60%;
+    clip-path: polygon(0% 0, 100% 0, 98.5% 100%, 3% 100%);
+
+    animation: sub-transition-contact 1s cubic-bezier(0, 1, 1, 1) forwards;
+}
+
+.transitionContact2-2 {
     animation-delay: 200ms;
 }
 
-.fade-contact-200 {
-    opacity: 0;
-    
-    animation: fade-contact 1s ease-out forwards;
+.transitionContact2-2::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    align-self: center;
+    background: #34302b;
+    width: 966px;
+    height: 60%;
+    clip-path: polygon(0% 0, 100% 0, 98.5% 100%, 3% 100%);
+
+    animation: sub-transition-contact 1s cubic-bezier(0, 1, 1, 1) forwards;
+}
+
+.transitionContact2-3 {
+    animation-delay: 300ms;
+}
+
+.transitionContact2-3::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    align-self: center;
+    background: #2a2724;
+    width: 966px;
+    height: 60%;
+    clip-path: polygon(0% 0, 100% 0, 98.5% 100%, 3% 100%);
+
+    animation: sub-transition-contact 1s cubic-bezier(0, 1, 1, 1) forwards;
+}
+
+.transitionContact3 {
+    background: #c77d3e;
+    transform: translateX(-230%);
+    width: 1700px;
+    clip-path: polygon(0% 0, 100% 0, 98.5% 100%, 3% 100%);
+
+    animation: transition-contact3 1s cubic-bezier(0, 1, 1, 1) forwards;
     animation-delay: 400ms;
 }
 
-.fade-contact-300 {
-    opacity: 0;
-    
-    animation: fade-contact 1s ease-out forwards;
-    animation-delay: 600ms;
+.transitionContact3::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    align-self: center;
+    background: #211f1c;
+    width: 1130px;
+    height: 50%;
+    clip-path: polygon(0% 0, 100% 0, 99.3% 100%, 3% 100%);
+
+    animation: sub-transition-contact 1s cubic-bezier(0, 1, 1, 1) forwards;
 }
 
-.fade-contact-400 {
-    opacity: 0;
-    
-    animation: fade-contact 1s ease-out forwards;
-    animation-delay: 800ms;
-}
-
-@keyframes fade-contact {
-    from {
-        transform: translateX(-80px);
+@keyframes transition-contact1 {
+    to {
+        transform: translateX(-50%);
     }
+}
+
+@keyframes transition-contact2 {
+    to {
+        transform: translateX(-60%);
+    }
+}
+
+@keyframes transition-contact3 {
+    to {
+        transform: translateX(-70%);
+    }
+}
+
+@keyframes sub-transition-contact {
     to {
         transform: translateX(0);
-        opacity: 1;
     }
 }

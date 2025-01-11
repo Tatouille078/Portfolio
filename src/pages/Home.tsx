@@ -73,7 +73,7 @@ function Home() {
 
         setTimeout(() => {
             isScrolling.current = false;
-        }, 500);
+        }, 550);
     };
 
     const disableScroll = () => {
@@ -235,7 +235,7 @@ function Home() {
                         <div className='sky transition-all'></div>
                         <div className='flex flex-col items-center pt-52 min-h-[100vh] isolate'>
                             <h2 className='text-7xl mb-4 py-2 motion-reduce:animation-none fade-in'>Traits</h2>
-                            <div className='w-[70vw] grid grid-cols-3 gap-8 mt-40'>
+                            <div className='relative w-[70vw] grid grid-cols-3 gap-8 mt-40'>
                                 <div className='flex flex-col gap-4 border-r-2 border-gray-300 pr-4 motion-reduce:animation-none fade-in'>
                                     <h3 className='text-4xl text-gray-100 font-medium'>Creative</h3>
                                     <p className='text-lg text-gray-200 fade-in'>I'm drawn to all forms of art, constantly learning and experimenting to take my own unique approach. From visual design to storytelling, I embrace each medium as an opportunity to push boundaries and bring fresh ideas to life.</p>
@@ -248,6 +248,7 @@ function Home() {
                                     <h3 className='text-4xl text-gray-100 font-medium'>Ambitious</h3>
                                     <p className='text-lg text-gray-200 fade-in'>I'm always striving to reach new heights, constantly seeking opportunities to <br /> grow and improve. Whether tackling challenges or exploring unexplored territories, I approach every endeavor with determination and a drive to excel.</p>
                                 </div>
+                                <span className='absolute inset-0 w-full radialGradient scale-150 -z-10 fade-in'/>
                             </div>
                         </div>
                     </div>

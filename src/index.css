@@ -16,7 +16,7 @@ h2 {
 }
 
 .headerHover1 {
-  background-color: antiquewhite;
+  background-color: #faebd7;
   clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
 }
 
@@ -26,7 +26,7 @@ h2 {
 }
 
 .headerHover3 {
-  background-color: rgb(225, 166, 88);
+  background-color: #e1a658;
   clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
 }
 
