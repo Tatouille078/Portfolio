@@ -27,7 +27,15 @@ function Project() {
     }, [name])
 
     return (
-        <div className='flex flex-col items-center min-h-[100vh] bg-zinc-900 text-white overflow-hidden'>
+        <div className='relative flex flex-col items-center min-h-[100vh] bg-gradient-to-tr from-zinc-900 via-zinc-900 via-65% to-zinc-800 text-white overflow-hidden'>
+            <span className="introObjectL1"/>
+            <span className="introObjectL2"/>
+            <span className="introObjectL3"/>
+            <span className="introObjectL4"/>
+            <span className="introObjectR1"/>
+            <span className="introObjectR2"/>
+            <span className="introObjectR3"/>
+            <span className="introObjectR4"/>
             <Header />
             <div className="w-[60vw] relative">
                 <div className="w-[60vw] h-[60vh] mt-12 flex justify-center items-center">

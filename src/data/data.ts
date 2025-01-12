@@ -22,14 +22,14 @@ const projects: Project[] = [
         titleColor: "#634960",
         descColor: "#403244",
         subTitle1: "Technology used",
-        subText1: "HTML, CSS with Tailwind and Javascript with React",
+        subText1: "HTML, CSS with Tailwind and Typescript with React",
         subTitle2: "Fonctionnality",
         subText2: "Based on the bazaar Hypixel API, It gives each items a score and sort it to expose the best ones to flip on the bazaar."
     },
     {
         id: 2,
         type: "perso",
-        title: "Projet de fin d'étude",
+        title: "Chou fleur",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ducimus natus eligendi expedita, blablalba blablalba blablalba blablalba blablalba",
         images: ["project3.jpg", "project4.jpg"],
         titleColor: "#3f3f46",
@@ -42,7 +42,7 @@ const projects: Project[] = [
     {
         id: 3,
         type: "perso",
-        title: "Projet de fin d'étude",
+        title: "Oignon",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ducimus natus eligendi expedita, blablalba blablalba blablalba blablalba blablalba",
         images: ["project3.jpg", "project4.jpg"],
         titleColor: "#3f3f46",
@@ -55,7 +55,7 @@ const projects: Project[] = [
     {
         id: 4,
         type: "perso",
-        title: "Projet de fin d'étude",
+        title: "Patate",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ducimus natus eligendi expedita, blablalba blablalba blablalba blablalba blablalba",
         images: ["project3.jpg", "project4.jpg"],
         titleColor: "#3f3f46",
@@ -68,7 +68,7 @@ const projects: Project[] = [
     {
         id: 5,
         type: "school",
-        title: "Projet de fin d'étude",
+        title: "Carrot",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ducimus natus eligendi expedita, blablalba blablalba blablalba blablalba blablalba",
         images: ["project3.jpg", "project4.jpg"],
         titleColor: "#3f3f46",

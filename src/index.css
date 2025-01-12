@@ -21,7 +21,7 @@ h2 {
 }
 
 .headerHover2 {
-  background-color: #f0ca99;
+  background-color: hsl(34, 74%, 77%);
   clip-path: polygon(0% 0, 100% 0, 90% 100%, 10% 100%);
 }
 
@@ -48,6 +48,14 @@ h2 {
   font-style: normal;
 }
 
+.leftSide {
+  animation: left-side 3s ease-in-out infinite;
+}
+
+.rightSide {
+  animation: right-side 3s ease-in-out infinite;
+}
+
 @keyframes fade-header {
   to {
     width: 50vw;
@@ -55,6 +63,32 @@ h2 {
     color: #f1f5f9;
   }
 }
+
+@keyframes left-side {
+  from {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes right-side {
+  from {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+
 
 ::-webkit-scrollbar {
   height: 10px;

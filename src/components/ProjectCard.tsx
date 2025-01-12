@@ -33,8 +33,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ type, onClick }) => {
                             className={`w-72 flex text-center flex-col mx-2 cursor-pointer ${isCurrentPage ? "opacity-75 cursor-default" : ""}`}
                             onClick={isCurrentPage ? undefined : (e) => handleClick(e, project.title)}
                         >
-                            <h3 className="py-1 font-semibold text-xl bg-zinc-700 rounded-t-xl w-full text-[#f0ca99]">{project.title}</h3>
-                            <p className="w-full bg-zinc-800 rounded-b-xl py-1">{project.description}</p>
+                            <h3 className="py-1 font-semibold text-xl bg-zinc-700 rounded-t-xl w-full text-white"
+                                style={{ background: project.titleColor}}
+                            >
+                                {project.title}
+                            </h3>
+                            <p className="w-full bg-zinc-800 rounded-b-xl py-1"
+                                style={{ background: project.descColor}}
+                            >
+                                {project.description}
+                            </p>
                         </div>
                     );
                 })}

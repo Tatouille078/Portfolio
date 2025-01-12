@@ -20,7 +20,7 @@ function Contact() {
 
     return (
         <>
-            <div className='flex flex-col items-center min-h-[100vh] bg-zinc-900 text-white overflow-hidden'>
+            <div className='flex flex-col items-center min-h-[100vh] bg-gradient-to-tr from-zinc-900 via-zinc-900 via-65% to-zinc-800  text-white overflow-hidden'>
                 <Header />
                 <div className='w-[45vw] flex flex-col items-start h-[70vh] justify-center mt-20 text-[#18181b]'>
                     <div className='relative group'>
@@ -74,7 +74,7 @@ function Contact() {
                     <div className='relative flex gap-3 justify-start items-center mt-8 py-1 pl-0.5 text-lg group'>
                         <RiEarthFill className='relative z-10 text-3xl' />
                         <p className='relative z-10'>Western surburbs of Paris, France</p>
-                        <span className='absolute transitionContact3 inset-0 h-full duration-300 group-hover:w-[1750px]' />
+                        <span className='absolute transitionContact3 inset-0 h-full duration-300 w-[1700px] group-hover:w-[1800px]' />
                     </div>
                 </div>
             </div >

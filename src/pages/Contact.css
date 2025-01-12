@@ -83,7 +83,6 @@
 .transitionContact3 {
     background: #c77d3e;
     transform: translateX(-230%);
-    width: 1700px;
     clip-path: polygon(0% 0, 100% 0, 98.5% 100%, 3% 100%);
 
     animation: transition-contact3 1s cubic-bezier(0, 1, 1, 1) forwards;
@@ -96,7 +95,7 @@
     inset: 0;
     align-self: center;
     background: #211f1c;
-    width: 1130px;
+    width: 66.5%;
     height: 50%;
     clip-path: polygon(0% 0, 100% 0, 99.3% 100%, 3% 100%);
 

@@ -5,7 +5,7 @@ export default {
     extend: {
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
-        monospace: ['"Courier New"', 'monospace'],
+        monospace: ['Courier New', 'monospace'],
       },
     },
   },

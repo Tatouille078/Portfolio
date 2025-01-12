@@ -6,7 +6,7 @@
 }
 
 .transitionObject1 {
-    background-color: antiquewhite;
+    background-color: #faebd7;
     clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
     width: 150vw;
 
@@ -31,6 +31,102 @@
 
 .textTrapez {
     clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
+}
+
+.introObjectL1, .introObjectR2, .introObjectL3, .introObjectR4, .introObjectR1, .introObjectL2, .introObjectR3, .introObjectL4 {
+    position: absolute;
+    inset: 0;
+    width: 1900px;
+    height: 25.1vh;
+    z-index: 100;
+}
+
+.introObjectL1 {
+    background-color: #2F2E35;
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+    transform: translateX(-43.9%);
+    
+    animation: intro-left 700ms ease-in forwards;
+    animation-delay: 300ms;
+}
+
+.introObjectR1 {
+    background-color: #37353D;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    transform: translateX(46%);
+    
+    animation: intro-right 700ms ease-in forwards;
+    animation-delay: 200ms;
+}
+
+.introObjectL2 {
+    background-color: #54555E;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    transform: translateX(-43.9%);
+    top: 25vh;
+    
+    animation: intro-left 700ms ease-in forwards;
+    animation-delay: 100ms;
+}
+
+.introObjectR2 {
+    background-color: #5E5E68;
+    clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
+    transform: translateX(46%);
+    top: 25vh;
+    
+    animation: intro-right 700ms ease-in forwards;
+}
+
+.introObjectL3 {
+    background-color: #5E5E68;
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+    transform: translateX(-43.9%);
+    top: 50vh;
+    
+    animation: intro-left 700ms ease-in forwards;
+}
+
+.introObjectR3 {
+    background-color: #54555E;
+    clip-path: polygon(0% 0, 100% 0, 90% 100%, 10% 100%);
+    transform: translateX(46%);
+    top: 50vh;
+    
+    animation: intro-right 700ms ease-in forwards;
+    animation-delay: 100ms;
+}
+
+.introObjectL4 {
+    background-color: #37353D;
+    clip-path: polygon(0% 0, 100% 0, 90% 100%, 10% 100%);
+    transform: translateX(-43.9%);
+    top: 75vh;
+    
+    animation: intro-left 700ms ease-in forwards;
+    animation-delay: 200ms;
+}
+
+.introObjectR4 {
+    background-color: #2F2E35;
+    clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
+    transform: translateX(46%);
+    top: 75vh;
+    
+    animation: intro-right 700ms ease-in forwards;
+    animation-delay: 300ms;
+}
+
+@keyframes intro-left {
+    to {
+        transform: translateX(-120vw);
+    }
+}
+
+@keyframes intro-right {
+    to {
+        transform: translateX(100vw);
+    }
 }
 
 @keyframes transition-project1 {

@@ -58,12 +58,10 @@ section {
   background-image: url("../assets/bgg.png");
   height: 100%;
   width: 100%;
-  background-size: 250%;
-  background-position: center;
   opacity: 0.5;
   pointer-events: none;
-  filter: contrast(120%) brightness(80%);
-  
+  z-index: 0;
+
   animation: sky linear forwards;
   animation-timeline: view();
   animation-range-start: entry;
@@ -76,7 +74,7 @@ section {
   left: 0;
   width: 100%;
   height: 50vh;
-  background: linear-gradient(to bottom, #2e2e32 , rgba(255, 255, 255, 0));
+  background: linear-gradient(to bottom, #2e2e32, rgba(255, 255, 255, 0));
   pointer-events: none;
 
   animation: imgBorder linear forwards;
@@ -92,7 +90,7 @@ section {
   position: absolute;
   font-size: 1.5rem;
   line-height: 2rem;
-  color: whitesmoke;
+  color: rgb(245, 245, 245);
   z-index: 10;
 
   animation: arrowDown 2s ease-in-out infinite forwards;
@@ -111,15 +109,21 @@ section {
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade-right {
-  from { 
+  from {
     opacity: 0;
-    transform: translateX(80px); 
+    transform: translateX(80px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -127,10 +131,11 @@ section {
 }
 
 @keyframes fade-left {
-  from { 
+  from {
     opacity: 0;
     transform: translateX(-80px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -138,10 +143,16 @@ section {
 }
 
 @keyframes sky {
-  to { 
-    background-size: 175%;
+  from {
+    background-size: 300%;
+    background-position: bottom;
+    filter: contrast(120%) brightness(80%);
+  }
+
+  to {
+    background-size: 300%;
     background-position: top;
-    filter: contrast(140%) brightness(70%);
+    filter: contrast(140%) brightness(60%);
   }
 }
 
@@ -152,14 +163,19 @@ section {
 }
 
 @keyframes arrowDown {
-  0%, 20% {
+
+  0%,
+  20% {
     transform: translateY(-40px);
     opacity: 0;
   }
-  50%, 80% {
+
+  50%,
+  80% {
     transform: translateY(-20px);
     opacity: 1;
   }
+
   100% {
     transform: translateY(0);
     opacity: 0;
