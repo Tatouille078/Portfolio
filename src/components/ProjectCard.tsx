@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ type, onClick }) => {
                     return (
                         <div
                             key={project.id}
-                            className={`w-72 flex text-center flex-col mx-2 cursor-pointer ${isCurrentPage ? "opacity-75 cursor-default" : ""}`}
+                            className={`w-72 flex text-center flex-col cursor-pointer ${isCurrentPage ? "opacity-75 cursor-default" : ""}`}
                             onClick={isCurrentPage ? undefined : (e) => handleClick(e, project.title)}
                         >
                             <h3 className="py-1 font-semibold text-xl bg-zinc-700 rounded-t-xl w-full text-white"

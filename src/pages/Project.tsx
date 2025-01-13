@@ -88,7 +88,7 @@ function Project() {
             </div>
             <div className="mt-auto mb-4 w-full flex flex-col items-center">
                 <span className="w-[70vw] border-t-2 border-gray-300 mb-6"></span>
-                <div className="w-full max-w-[100vw] h-[20vh] overflow-x-scroll">
+                <div className="w-full max-w-[100vw] h-[20vh] overflow-x-scroll overflow-y-hidden">
                     <div className={`h-full transition-all ease-out flex flex-row min-w-max ${isTransitioning ? "pointer-events-none" : "pointer-events-auto"}`}>
                         <h2 className="text-center self-center mx-8 font-semibold text-2xl">Personnal<br />projects :</h2>
                         <ProjectCard type="perso" onClick={handleTransitioning} />

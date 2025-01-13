@@ -1,7 +1,6 @@
 .transitionContact1 {
     background: #f0ca99;
     transform: translateX(-230%);
-    width: 1700px;
     clip-path: polygon(0% 0, 100% 0, 96% 100%, 5% 100%);
 
     animation: transition-contact1 1s cubic-bezier(0, 1, 1, 1) forwards;
@@ -13,8 +12,9 @@
     inset: 0;
     align-self: center;
     background: #4b4237;
-    width: 800px;
+    width: 50%;
     height: 70%;
+    left: -11vw;
     clip-path: polygon(0% 0, 100% 0, 96% 100%, 5% 100%);
 
     animation: sub-transition-contact 1s cubic-bezier(0, 1, 1, 1) forwards;
@@ -23,7 +23,6 @@
 .transitionContact2-1, .transitionContact2-2, .transitionContact2-3 {
     background: #e3a85b;
     transform: translateX(-230%);
-    width: 1700px;
     clip-path: polygon(0% 0, 100% 0, 98% 100%, 3% 100%);
 
     animation: transition-contact2 1s cubic-bezier(0, 1, 1, 1) forwards;
@@ -39,8 +38,9 @@
     inset: 0;
     align-self: center;
     background: #3e3830;
-    width: 966px;
+    width: 60%;
     height: 60%;
+    left: -12vw;
     clip-path: polygon(0% 0, 100% 0, 98.5% 100%, 3% 100%);
 
     animation: sub-transition-contact 1s cubic-bezier(0, 1, 1, 1) forwards;
@@ -56,8 +56,9 @@
     inset: 0;
     align-self: center;
     background: #34302b;
-    width: 966px;
+    width: 60%;
     height: 60%;
+    left: -12vw;
     clip-path: polygon(0% 0, 100% 0, 98.5% 100%, 3% 100%);
 
     animation: sub-transition-contact 1s cubic-bezier(0, 1, 1, 1) forwards;
@@ -73,8 +74,9 @@
     inset: 0;
     align-self: center;
     background: #2a2724;
-    width: 966px;
+    width: 60%;
     height: 60%;
+    left: -12vw;
     clip-path: polygon(0% 0, 100% 0, 98.5% 100%, 3% 100%);
 
     animation: sub-transition-contact 1s cubic-bezier(0, 1, 1, 1) forwards;
@@ -95,8 +97,9 @@
     inset: 0;
     align-self: center;
     background: #211f1c;
-    width: 66.5%;
+    width: 70%;
     height: 50%;
+    left: -13.5vw;
     clip-path: polygon(0% 0, 100% 0, 99.3% 100%, 3% 100%);
 
     animation: sub-transition-contact 1s cubic-bezier(0, 1, 1, 1) forwards;

@@ -36,7 +36,7 @@
 .introObjectL1, .introObjectR2, .introObjectL3, .introObjectR4, .introObjectR1, .introObjectL2, .introObjectR3, .introObjectL4 {
     position: absolute;
     inset: 0;
-    width: 1900px;
+    width: 100vw;
     height: 25.1vh;
     z-index: 100;
 }

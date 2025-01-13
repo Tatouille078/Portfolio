@@ -22,12 +22,12 @@ function Contact() {
         <>
             <div className='flex flex-col items-center min-h-[100vh] bg-gradient-to-tr from-zinc-900 via-zinc-900 via-65% to-zinc-800  text-white overflow-hidden'>
                 <Header />
-                <div className='w-[45vw] flex flex-col items-start h-[70vh] justify-center mt-20 text-[#18181b]'>
-                    <div className='relative group'>
-                        <h2 className="relative text-[68px] z-10">How to contact me:</h2>
-                        <span className='absolute transitionContact1 transition-all inset-0 h-full duration-[500ms] group-hover:w-[1850px]' />
+                <div className='lg:w-[40vw] md:w-[50vw] w-[64vw] pr-4 sm:pr-0 flex flex-col items-start h-[70vh] justify-center mt-20 text-[#18181b]'>
+                    <div className='relative group md:h-32 flex items-center'>
+                        <h2 className="relative md:text-6xl text-4xl z-10">How to <br/>contact me:</h2>
+                        <span className='absolute transitionContact1 transition-all inset-0 h-full duration-[500ms] lg:w-[135vw] w-[135vw] group-hover:w-[155vw] lg:group-hover:w-[145vw] xl:w-[100vw] xl:group-hover:w-[110vw]' />
                     </div>
-                    <div className='relative flex gap-3 justify-start py-2 items-center mt-8 text-xl group'>
+                    <div className='relative sm:flex gap-3 justify-start py-2 items-center mt-8 text-xl group hidden'>
                         <IoIosMail className='relative z-10 text-4xl' />
                         <strong className='relative z-10 font-semibold'>Mail: </strong>
                         <div className="relative group flex flex-col items-center">
@@ -42,14 +42,7 @@ function Contact() {
                                 Copied to clipboard!
                             </div>
                         </div>
-                        <p className='z-10 font-semibold'>/</p>
-                        <a href="mailto:loick78.devismes91@gmail.com" className="flex font-semibold">
-                            <div className="relative group flex flex-col items-center">
-                                <p className='relative z-10 font-semibold'>Mail me</p>
-                                <span className="absolute border-b-2 border-[#18181b] top-6 h-0 transition-all w-0 group-hover:w-full z-10" />
-                            </div>
-                        </a>
-                        <span className='absolute transitionContact2-1 inset-0 h-full duration-[400ms] group-hover:w-[1800px]' />
+                        <span className='absolute transitionContact2-1 inset-0 h-full duration-[400ms] lg:w-[140vw] group-hover:w-[180vw] w-[160vw] lg:group-hover:w-[150vw] xl:w-[95vw] xl:group-hover:w-[105vw]' />
                     </div>
                     <div className='relative flex py-2 mt-8 text-xl group'>
                         <div className='relative gap-3 flex justify-start items-center group cursor-pointer'>
@@ -59,7 +52,7 @@ function Contact() {
                                 <span className="absolute border-b-2 border-[#18181b] top-6 h-0 transition-all w-0 group-hover:w-full z-10" />
                             </div>
                         </div>
-                        <span className='absolute transitionContact2-2 inset-0 h-full duration-[400ms] group-hover:w-[1800px]' />
+                        <span className='absolute transitionContact2-2 inset-0 h-full duration-[400ms] lg:w-[140vw] group-hover:w-[180vw] w-[160vw] lg:group-hover:w-[150vw] xl:w-[95vw] xl:group-hover:w-[105vw]' />
                     </div>
                     <div className='relative flex py-2 mt-8 text-xl group'>
                         <div className='relative gap-3 flex justify-start items-center group cursor-pointer'>
@@ -69,12 +62,12 @@ function Contact() {
                                 <span className="absolute border-b-2 border-[#18181b] top-6 h-0 transition-all w-0 group-hover:w-full z-10" />
                             </div>
                         </div>
-                        <span className='absolute transitionContact2-3 inset-0 h-full duration-[400ms] group-hover:w-[1800px]' />
+                        <span className='absolute transitionContact2-3 inset-0 h-full duration-[400ms] lg:w-[140vw] group-hover:w-[180vw] w-[160vw] lg:group-hover:w-[150vw] xl:w-[95vw] xl:group-hover:w-[105vw]' />
                     </div>
                     <div className='relative flex gap-3 justify-start items-center mt-8 py-1 pl-0.5 text-lg group'>
-                        <RiEarthFill className='relative z-10 text-3xl' />
+                        <RiEarthFill className='relative text-5xl w-12 z-10 lg:text-3xl' />
                         <p className='relative z-10'>Western surburbs of Paris, France</p>
-                        <span className='absolute transitionContact3 inset-0 h-full duration-300 w-[1700px] group-hover:w-[1800px]' />
+                        <span className='absolute transitionContact3 inset-0 h-full duration-300 lg:w-[150vw] group-hover:w-[230vw] w-[210vw] lg:group-hover:w-[160vw] xl:w-[90vw] xl:group-hover:w-[100vw]' />
                     </div>
                 </div>
             </div >

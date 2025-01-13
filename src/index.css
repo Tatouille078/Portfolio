@@ -5,6 +5,7 @@
 
 body {
   @apply font-montserrat;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -59,36 +60,34 @@ h2 {
 @keyframes fade-header {
   to {
     width: 50vw;
-    gap: 3rem;
+    gap: 2rem;
     color: #f1f5f9;
   }
 }
 
 @keyframes left-side {
   from {
-    transform: translateX(0);
+    width: 3vw;
   }
   50% {
-    transform: translateX(10vw);
+    width: 15vw;
   }
   to {
-    transform: translateX(0);
+    width: 3vw;
   }
 }
 
 @keyframes right-side {
   from {
-    transform: translateX(0);
+    width: 3vw;
   }
   50% {
-    transform: translateX(-10vw);
+    width: 15vw;
   }
   to {
-    transform: translateX(0);
+    width: 3vw;
   }
 }
-
-
 
 ::-webkit-scrollbar {
   height: 10px;
