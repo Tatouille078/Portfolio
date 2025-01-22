@@ -34,12 +34,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ type, onClick }) => {
                             onClick={isCurrentPage ? undefined : (e) => handleClick(e, project.title)}
                         >
                             <h3 className="py-1 font-semibold text-xl bg-zinc-700 rounded-t-xl w-full text-white"
-                                style={{ background: project.titleColor}}
+                                style={{ 
+                                    background: project.titleColor,
+                                    color: project.textColor
+                                }}
                             >
                                 {project.title}
                             </h3>
-                            <p className="w-full bg-zinc-800 rounded-b-xl py-1"
-                                style={{ background: project.descColor}}
+                            <p className="w-full bg-zinc-800 rounded-b-xl p-1"
+                                style={{ 
+                                    background: project.descColor,
+                                    color: project.textColor
+                                }}
                             >
                                 {project.description}
                             </p>
