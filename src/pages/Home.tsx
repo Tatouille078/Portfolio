@@ -1,13 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 import './Home.css';
 import Header from '../components/Header';
-import { IoIosArrowDown, IoLogoGithub, IoLogoLinkedin, IoLogoCss3, IoLogoHtml5, IoLogoPython } from "react-icons/io";
-import { RiTailwindCssFill, RiReactjsFill } from "react-icons/ri";
-import { FaJs } from "react-icons/fa";
-import { SiCplusplus, SiGodotengine } from "react-icons/si";
+import { IoIosArrowDown, IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
 import ProjectCard from '../components/ProjectCard';
 import Wave from '../components/Wave';
 import { Link } from 'react-router-dom';
+import KnowledgeCard from '../components/KnowledgeCard';
 
 function Home() {
 
@@ -165,45 +163,11 @@ function Home() {
                             <h2 className='xl:text-[68px] fade-right lg:text-6xl text-5xl lg:mt-6'>Knowledge</h2>
                             <h3 className='text-2xl text-gray-200 mt-6 fade-right lg:mt-8'>Language & library :</h3>
                             <div className={`w-full h-[29vh] mt-2 flex flex-wrap justify-center lg:justify-end gap-2 px-2 text-zinc-200 ${isDesktop ? "fade-right" : ""}`}>
-                                <div className='xlw-[9rem] w-[30%] xl:h-[9vh] h-24 bg-zinc-700 rounded-xl flex flex-col justify-center items-center text-center gap-2'>
-                                    <IoLogoCss3 className='text-4xl text-[#26A3D8]' />
-                                    <p>CSS</p>
-                                </div>
-                                <div className='xlw-[9rem] w-[30%] xl:h-[9vh] h-24 bg-zinc-700 rounded-xl flex flex-col justify-center items-center text-center gap-2'>
-                                    <IoLogoHtml5 className='text-4xl text-[#E86025]' />
-                                    <p>HTML</p>
-                                </div>
-                                <div className='xlw-[9rem] w-[30%] xl:h-[9vh] h-24 bg-zinc-700 rounded-xl flex flex-col justify-center items-center text-center gap-2'>
-                                    <FaJs className='text-4xl text-[#F7DF1E]' />
-                                    <p>Javascript</p>
-                                </div>
-                                <div className='xlw-[9rem] w-[30%] xl:h-[9vh] h-24 bg-zinc-700 rounded-xl flex flex-col justify-center items-center text-center gap-2'>
-                                    <RiReactjsFill className='text-4xl text-[#5CD3F5]' />
-                                    <p>React</p>
-                                </div>
-                                <div className='xlw-[9rem] w-[30%] xl:h-[9vh] h-24 bg-zinc-700 rounded-xl flex flex-col justify-center items-center text-center gap-2'>
-                                    <RiTailwindCssFill className='text-4xl text-[#38BDF7]' />
-                                    <p>Tailwind CSS</p>
-                                </div>
-                                <div className='xlw-[9rem] w-[30%] xl:h-[9vh] h-24 bg-zinc-700 rounded-xl flex flex-col justify-center items-center text-center gap-2'>
-                                    <IoLogoPython className='text-4xl' />
-                                    <p>Python</p>
-                                </div>
-                                <div className='xlw-[9rem] w-[30%] xl:h-[9vh] h-24 bg-zinc-700 rounded-xl flex flex-col justify-center items-center text-center gap-2'>
-                                    <SiCplusplus className='text-4xl text-[#5867B7]' />
-                                    <p>C++ (W.I.P)</p>
-                                </div>
+                                <KnowledgeCard type='language' />
                             </div>
                             <h3 className={`text-2xl text-gray-200 lg:mt-6 mt-24 ${isDesktop ? 'fade-project-right' : ''}`}>Tools :</h3>
                             <div className='w-full h-[19vh] mt-2 flex flex-wrap justify-center lg:justify-end gap-2 px-2 fade-project-right'>
-                                <div className='xlw-[9rem] w-[30%] xl:h-[9vh] h-24 bg-zinc-700 rounded-xl flex flex-col justify-center items-center text-center gap-2'>
-                                    <IoLogoGithub className='text-4xl text-black' />
-                                    <p>Github</p>
-                                </div>
-                                <div className='xlw-[9rem] w-[30%] xl:h-[9vh] h-24 bg-zinc-700 rounded-xl flex flex-col justify-center items-center text-center gap-2'>
-                                    <SiGodotengine className='text-4xl text-[#56a4db]' />
-                                    <p>Godot (W.I.P)</p>
-                                </div>
+                                <KnowledgeCard type='tool'/>
                             </div>
                         </div>
                     </div>
