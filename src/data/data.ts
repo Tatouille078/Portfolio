@@ -59,7 +59,7 @@ const projects: Project[] = [
     {
         id: 4,
         type: "perso",
-        title: "Mario64_Romhack",
+        title: "Mario64 Romhack",
         description: "Romhack for mario 64. A complete casual game with 100 stars was planned with fully customised maps and a new story with creative concept.",
         images: ["/src/assets/project/mario1.png", "/src/assets/project/mario2.png"],
         titleColor: "#495E45",
@@ -86,14 +86,14 @@ const projects: Project[] = [
     }
 ];
 
-export type knowledges = {
+export type Knowledges = {
     id: number;
     type: string;
     name: string;
     icon: string;
 }
 
-const knowledges: knowledges[] = [
+const knowledges: Knowledges[] = [
     {
         id: 1,
         type: "language",

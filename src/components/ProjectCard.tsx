@@ -12,7 +12,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ type, onClick }) => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    const handleClick = (e: React.MouseEvent, projectTitle: string) => {
+    const handleClick = (_: React.MouseEvent, projectTitle: string) => {
         if (onClick) onClick();
 
         setTimeout(() => {
@@ -25,7 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ type, onClick }) => {
             {projects
                 .filter(project => project.type === type)
                 .map(project => {
-                    const isCurrentPage = location.pathname === `/project/${project.title}`;
+                    const isCurrentPage = location.pathname === `/project/${project.title.replace(" ", "%20")}`;
 
                     return (
                         <div

@@ -106,7 +106,7 @@ function Project() {
                     {/* media is under 768px in w */}
                     <div className="relative md:hidden my-auto">
                         <div className="flex flex-col items-center gap-y-8 px-2 mx-2 overflow-y-scroll overflow-x-hidden max-h-[60vh] py-2 rounded-xl border-2"
-                            style={{ borderColor: currentProject?.descColor }}
+                            style={{ borderColor: currentProject?.titleColor }}
                         >
                             <img src={currentProject?.images[0]} alt="" className="rounded-xl" />
                             <div className="col-start-2 col-end-4 flex flex-col text-center items-center">

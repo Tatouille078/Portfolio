@@ -9,7 +9,7 @@ import KnowledgeCard from '../components/KnowledgeCard';
 
 function Home() {
 
-    const nameRef = useRef<HTMLElement | null>(null);
+    const nameRef = useRef<HTMLHeadingElement | null>(null);
     const [isTextEvent, setTextEvent] = useState(false);
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -24,7 +24,7 @@ function Home() {
         const interval = setInterval(() => {
             nameElement.innerHTML = dataValue
                 .split("")
-                .map((letter: string, index: number) => {
+                .map((_: string, index: number) => {
                     if (iteration >= letters.length) {
                         clearInterval(interval);
                     }
