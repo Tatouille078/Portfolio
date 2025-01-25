@@ -25,7 +25,7 @@ function Contact() {
                 <div className='lg:w-[40vw] md:w-[50vw] w-[64vw] pr-4 sm:pr-0 flex flex-col items-start h-[70vh] justify-center mt-20 text-[#18181b]'>
                     <div className='relative group md:h-32 flex items-center'>
                         <h2 className="relative md:text-6xl text-4xl z-10">How to <br/>contact me:</h2>
-                        <span className='absolute transitionContact1 transition-all inset-0 h-full duration-[500ms] lg:w-[135vw] w-[135vw] group-hover:w-[155vw] lg:group-hover:w-[145vw] xl:w-[100vw] xl:group-hover:w-[110vw]' />
+                        <span className='absolute transitionContact1 transition-all inset-0 h-full duration-[500ms] w-[135vw] group-hover:w-[155vw] lg:group-hover:w-[145vw] xl:w-[100vw] xl:group-hover:w-[110vw]' />
                     </div>
                     <div className='relative sm:flex gap-3 justify-start py-2 items-center mt-8 text-xl group hidden'>
                         <IoIosMail className='relative z-10 text-4xl' />

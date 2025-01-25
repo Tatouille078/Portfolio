@@ -50,7 +50,7 @@ const projects: Project[] = [
         images: ["/src/assets/project/wynnpack1.png", "/src/assets/project/wynnpack2.png"],
         titleColor: "#475060",
         descColor: "#313342",
-        subTitle1: "Technologies utilisées",
+        subTitle1: "Technology used",
         subText1: "3D with Blockbench. Task management with Google sheets.",
         subTitle2: "About it",
         subText2: "Made for fun but never finished it. I gave up at 33 models out of 100 and put about 80h into it.",
@@ -78,7 +78,7 @@ const projects: Project[] = [
         images: ["project3.jpg", "project4.jpg"],
         titleColor: "#3f3f46",
         descColor: "#27272a",
-        subTitle1: "Technologies utilisées",
+        subTitle1: "Technology used",
         subText1: "HTML, CSS, JavaScript, React, Next.js",
         subTitle2: "Fonctionnalités",
         subText2: "Site e-commerce responsive, création de composants React, gestion du state avec Redux, API GraphQL",
@@ -145,7 +145,7 @@ const knowledges: knowledges[] = [
     {
         id: 9,
         type: "tool",
-        name: "Godot (W.I.P)",
+        name: "Godot",
         icon: "./src/assets/icons/godot.png",
     },
 ]

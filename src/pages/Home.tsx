@@ -118,8 +118,8 @@ function Home() {
                     <Wave side='right' count={24} className='' />
                     <Header />
                     <div className='mt-[27vh] md:mb-[31vh] mb-[25vh] flex flex-col items-center group'>
-                        <h1 className={`font-monospace mb-8 transition-all duration-1000 xl:text-[6.5rem] lg:text-8xl text-6xl mix-blend-difference ${isTextEvent ? 'translate-y-0' : 'motion-reduce:translate-y-0 translate-y-20'}`} data-value="Hi there!" ref={nameRef}>Hi there!</h1>
-                        <h6 className={`lg:text-3xl text-xl w-[80%] text-gray-300 text-center flex-wrap transition-all duration-1000 ${isTextEvent ? 'opacity-100 translate-y-0' : 'opacity-0 motion-reduce:opacity-100 motion-reduce:translate-y-0 translate-y-40'}`}>My name is Loïck Devismes, <br /> I'm a web and game developper.</h6>
+                        <h1 className={`font-monospace mb-8 transition-all duration-1000 xl:text-[6.5rem] lg:text-8xl md:text-7xl text-6xl mix-blend-difference ${isTextEvent ? 'translate-y-0' : 'motion-reduce:translate-y-0 translate-y-20'}`} data-value="Hi there!" ref={nameRef}>Hi there!</h1>
+                        <h6 className={`lg:text-3xl md:text-2xl text-xl w-[90%] text-gray-300 text-center flex-wrap transition-all duration-1000 ${isTextEvent ? 'opacity-100 translate-y-0' : 'opacity-0 motion-reduce:opacity-100 motion-reduce:translate-y-0 translate-y-40'}`}>My name is Loïck Devismes, <br /> I'm a web and game developper.</h6>
                     </div>
                     <div className="relative mb-20 w-5">
                         <IoIosArrowDown className='arrowDown arrow1 opacity-0 motion-reduce:opacity-100 motion-reduce:animate-none' />
@@ -127,12 +127,12 @@ function Home() {
                         <IoIosArrowDown className='top-6 arrowDown arrow3 opacity-0 motion-reduce:opacity-100 motion-reduce:animate-none' />
                     </div>
                 </section>
-                <section className='flex flex-col pt-12 xl:pt-0 lg:pt-[10vh] lg:justify-center items-center w-full overflow-hidden lg:min-h-[100vh] min-h-[220vh]'>
-                    <div className='lg:grid lg:grid-cols-[3fr_2fr] max-w-[100vw] px-[2%] lg:px-2 xl:px-0 h-[72vh]'>
-                        <div className='flex sm:items-start flex-col sm:pr-4 items-center '>
+                <section className='flex flex-col pt-12 lg:pt-[7vh] xl:pt-[15vh] lg:justify-center items-center w-full overflow-hidden lg:min-h-[100vh] min-h-[220vh]'>
+                    <div className='lg:grid lg:grid-cols-[7fr_4fr] max-w-[100vw] px-[2%] lg:px-4 xl:gap-[3vw] h-[72vh] flex-grow items-center'>
+                        <div className='flex sm:items-start flex-col sm:pr-4 items-center lg:min-h-[750px]'>
                             <h2 className='md:text-[68px] fade-left text-5xl lg:mt-6'>My projects</h2>
                             <h3 className='text-2xl text-gray-200 mt-4 lg:mt-8 fade-left'>Personnal projects :</h3>
-                            <div className='sm:w-[660px] lg:max-w-[59vw] lg:h-[185px] h-[380px] mt-2 lg:overflow-x-auto lg:overflow-y-hidden overflow-y-scroll'>
+                            <div className='sm:w-[660px] lg:w-auto lg:h-[185px] lg:max-w-[58vw] lg:min-w-[95%] h-[380px] mt-2 lg:overflow-x-auto lg:overflow-y-hidden overflow-y-scroll'>
                                 <div
                                     onMouseEnter={handleMouseEnter}
                                     onMouseLeave={handleMouseLeave}
@@ -156,13 +156,13 @@ function Home() {
                                         <span className="absolute border-b-2 border-[#18181b] top-6 h-0 transition-all w-0 group-hover:w-full z-10" />
                                     </div>
                                 </div>
-                                <span className='absolute transitionContact3 inset-0 h-full duration-300 lg:w-[120vw] group-hover:w-[230vw] w-[380%] lg:group-hover:w-[160vw] xl:w-[70vw] xl:group-hover:w-[70vw]' />
+                                <span className='absolute transitionContact3 inset-0 h-full duration-300 lg:w-[120vw] group-hover:w-[230vw] w-[380%] lg:group-hover:w-[160vw] xl:w-[70vw] xl:group-hover:w-[80vw]' />
                             </Link>
                         </div>
-                        <div className='flex lg:items-end flex-col lg:pl-4 items-center lg:mt-0 mt-36'>
+                        <div className='flex lg:items-end flex-col lg:pl-4 items-center lg:mt-0 mt-36 lg:min-h-[750px]'>
                             <h2 className='xl:text-[68px] fade-right lg:text-6xl text-5xl lg:mt-6'>Knowledge</h2>
                             <h3 className='text-2xl text-gray-200 mt-6 fade-right lg:mt-8'>Language & library :</h3>
-                            <div className={`w-full h-[29vh] mt-2 flex flex-wrap justify-center lg:justify-end gap-2 px-2 text-zinc-200 ${isDesktop ? "fade-right" : ""}`}>
+                            <div className={`w-full h-[300px] mt-2 flex flex-wrap justify-center lg:justify-end gap-2 px-2 text-zinc-200 ${isDesktop ? "fade-right" : ""}`}>
                                 <KnowledgeCard type='language' />
                             </div>
                             <h3 className={`text-2xl text-gray-200 lg:mt-6 mt-24 ${isDesktop ? 'fade-project-right' : ''}`}>Tools :</h3>

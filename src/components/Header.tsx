@@ -19,7 +19,7 @@ const Header: React.FC = () => {
       }, []);
 
   return (
-    <header className={`flex justify-center items-center min-h-[7vh] text-xl transition-all gap-12 border-b-2 w-[50vw] ${isHomePage ? "fade-header" : ""} ${isTextEvent || isContactPage || isProjectPage ? "pointer-events-auto" : "pointer-events-none"}`}>
+    <header className={`flex justify-center items-center min-h-[7vh] text-xl transition-all gap-8 border-b-2 w-[50vw] ${isHomePage ? "fade-header" : ""} ${isTextEvent || isContactPage || isProjectPage ? "pointer-events-auto" : "pointer-events-none"}`}>
       <Link to="/">
         <div className="relative group flex flex-col w-24 items-center">
           <p className={`z-10 transition-opacity ${ isHomePage && isTextEvent ? "text-[#ffd59e] underline transition-colors duration-1000" : "" } ${ isTextEvent || isContactPage || isProjectPage ? "mix-blend-difference opacity-100" : "opacity-0" }`}>About</p>

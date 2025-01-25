@@ -13,8 +13,8 @@ const KnowledgeCard: React.FC<KnowledgeCardProps> = ({ type }) => {
                 .map(knowledge => {
 
                     return (
-                        <div className='xlw-[9rem] w-[30%] xl:h-[9vh] h-24 bg-zinc-700 rounded-xl flex flex-col justify-center items-center text-center gap-2'>
-                            <img src={knowledge.icon} alt="" className="max-h-[5vh] max-w-[50%]"/>
+                        <div key={knowledge.id} className='xlw-[9rem] w-[30%] xl:h-[9vh] h-24 bg-zinc-700 rounded-xl flex flex-col justify-center items-center text-center gap-2'>
+                            <img src={knowledge.icon} alt="" className="max-h-[4.5vh] max-w-[50%]"/>
                             <p>{knowledge.name}</p>
                         </div>
                     )

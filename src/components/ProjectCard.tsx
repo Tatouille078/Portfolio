@@ -17,7 +17,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ type, onClick }) => {
 
         setTimeout(() => {
             navigate(`/project/${projectTitle}`);
-        }, 700);
+        }, 980);
     };
 
     return (
