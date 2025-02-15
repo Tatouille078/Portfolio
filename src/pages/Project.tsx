@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Header from "../components/Header";
 import ProjectCard from "../components/ProjectCard";
 import './Project.css'
@@ -74,6 +74,8 @@ function Project() {
                                         <p className="relative max-w-[75%] text-xl z-10 py-1"
                                             style={{ color: currentProject?.textColor }}
                                         >{currentProject?.subText1}
+                                        <br/>
+                                        {currentProject?.link ? <Link to={currentProject.link} className="text-[#ffd59e] underline">Website here !</Link> : ""}
                                             <span className="absolute inset-0 w-[130%] -translate-x-[11.25%] -z-10 textTrapez"
                                                 style={{ background: currentProject?.descColor }}
                                             />

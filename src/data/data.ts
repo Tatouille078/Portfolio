@@ -11,6 +11,7 @@ export type Project = {
     subTitle2?: string;
     subText2?: string;
     textColor: string;
+    link?: string;
 }
 
 const projects: Project[] = [
@@ -23,10 +24,11 @@ const projects: Project[] = [
         titleColor: "#634960",
         descColor: "#403244",
         subTitle1: "Technology used",
-        subText1: "HTML, CSS with Tailwind and Typescript with React",
+        subText1: "HTML, CSS with Tailwind and Typescript with React.",
         subTitle2: "Fonctionnality",
         subText2: "Based on the bazaar Hypixel API, It gives each items a score and sort it to expose the best ones to flip on the bazaar.",
         textColor: "#fff",
+        link: "https://tatouille078.github.io/SkyFlippy/#/"
     },
     {
         id: 2,
