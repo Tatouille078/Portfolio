@@ -45,7 +45,7 @@ function Project() {
                         <div className="h-full flex justify-center items-center">
                             <div className="w-[98%] flex justify-center items-center m-4">
                                 <div className="grid grid-cols-3 justify-center gap-y-16 gap-x-4 items-center">
-                                    <img src={currentProject?.images[0]} alt="" className="rounded-xl" />
+                                    <img src={currentProject?.images[0]} alt="" className="rounded-xl xl:w-full w-[80%]" />
                                     <div className="col-start-2 col-end-4 flex flex-col text-center items-center">
                                         <h2 className="relative text-2xl font-semibold z-10 py-1"
                                             style={{ color: currentProject?.textColor }}
@@ -62,7 +62,7 @@ function Project() {
                                             />
                                         </p>
                                     </div>
-                                    <img src={currentProject?.images[1]} alt="" className="rounded-xl" />
+                                    <img src={currentProject?.images[1]} alt="" className="rounded-xl xl:w-full w-[80%]" />
                                     <div className="flex flex-col text-center items-center">
                                         <h2 className="relative text-2xl font-semibold z-10 py-2"
                                             style={{ color: currentProject?.textColor }}
@@ -165,7 +165,6 @@ function Project() {
                         <div className={`z-50 ${isTransitioning ? "transitionObject2" : ""}`} style={{ top: "0px", height: "100%" }}></div>
                         <div className={`z-50 ${isTransitioning ? "transitionObject3" : ""}`} style={{ top: "0px", height: "100%" }}></div>
                     </div>
-
                 </div>
                 <div className="mt-0 mb-4 w-full flex flex-col items-center max-h-52">
                     <span className="w-[70vw] border-t-2 border-gray-300 mb-4"></span>
@@ -174,7 +173,7 @@ function Project() {
                             <h2 className="text-center self-center mx-8 font-semibold text-2xl">Personnal<br />projects :</h2>
                             <ProjectCard type="perso" onClick={handleTransitioning} />
                             <h2 className="text-center self-center mx-8 ml-16 font-semibold text-2xl">School<br />projects :</h2>
-                            <ProjectCard type="school" />
+                            <ProjectCard type="school" onClick={handleTransitioning} />
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,5 @@
 section {
   min-height: 100vh;
-  max-height: 100vh;
   width: 100vw;
 }
 
@@ -56,13 +55,21 @@ section {
 .sky {
   position: absolute;
   background-image: url("../assets/bgg.png");
-  height: 100%;
   width: 100%;
+  height: 100%;
   opacity: 0.5;
   pointer-events: none;
   z-index: 0;
+}
 
+.sky-animation {
   animation: sky linear forwards;
+  animation-timeline: view();
+  animation-range-start: entry;
+}
+
+.sky-animation-mobile {
+  animation: skyMobile linear forwards;
   animation-timeline: view();
   animation-range-start: entry;
 }
@@ -144,13 +151,27 @@ section {
 
 @keyframes sky {
   from {
-    background-size: 300%;
+    background-size: 300vw;
     background-position: bottom;
     filter: contrast(120%) brightness(80%);
   }
 
   to {
-    background-size: 300%;
+    background-size: 300vw;
+    background-position: top;
+    filter: contrast(140%) brightness(60%);
+  }
+}
+
+@keyframes skyMobile {
+  from {
+    background-size: 750vw;
+    background-position: bottom;
+    filter: contrast(120%) brightness(80%);
+  }
+
+  to {
+    background-size: 750vw;
     background-position: top;
     filter: contrast(140%) brightness(60%);
   }

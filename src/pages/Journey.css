@@ -1,0 +1,38 @@
+.journeyFadeCard {
+    background: linear-gradient(#18181b 0%, transparent 20%, transparent 80%, #18181b 100%);
+}
+
+.ring-animation-0 {
+    animation: ringAnimationIClock 130s linear infinite forwards;
+}
+
+.ring-animation-1 {
+    animation: ringAnimationClock 105s linear infinite forwards;
+}
+.ring-animation-2 {
+    animation: ringAnimationIClock 85s linear infinite forwards;
+}
+.ring-animation-3 {
+    animation: ringAnimationClock 70s linear infinite forwards;
+}
+.ring-animation-4 {
+    animation: ringAnimationIClock 60s linear infinite forwards;
+}
+
+@keyframes ringAnimationIClock {
+    from {
+        rotate: 360deg;
+    }
+    to {
+        rotate: 0deg;
+    }
+}
+
+@keyframes ringAnimationClock {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
+}

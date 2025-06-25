@@ -64,12 +64,24 @@ h2 {
   font-style: normal;
 }
 
-.leftSide {
-  animation: left-side 3s ease-in-out infinite;
+.waveLayer0 {
+  animation: layer-0 3s ease-in-out infinite;
+  width: 3vw;
 }
 
-.rightSide {
-  animation: right-side 3s ease-in-out infinite;
+.waveLayer1 {
+  animation: layer-1 3s ease-in-out infinite;
+  width: 6vw;
+}
+
+.waveLayer2 {
+  animation: layer-2 3s ease-in-out infinite;
+  width: 11vw;
+}
+
+.waveLayer3 {
+  animation: layer-3 3s ease-in-out infinite;
+  width: 18vw;
 }
 
 @keyframes fade-header {
@@ -80,7 +92,7 @@ h2 {
   }
 }
 
-@keyframes left-side {
+@keyframes layer-0 {
   from {
     width: 3vw;
   }
@@ -92,15 +104,39 @@ h2 {
   }
 }
 
-@keyframes right-side {
+@keyframes layer-1 {
   from {
-    width: 3vw;
+    width: 6vw;
   }
   50% {
-    width: 15vw;
+    width: 18vw;
   }
   to {
-    width: 3vw;
+    width: 6vw;
+  }
+}
+
+@keyframes layer-2 {
+  from {
+    width: 11vw;
+  }
+  50% {
+    width: 23vw;
+  }
+  to {
+    width: 11vw;
+  }
+}
+
+@keyframes layer-3 {
+  from {
+    width: 18vw;
+  }
+  50% {
+    width: 30vw;
+  }
+  to {
+    width: 18vw;
   }
 }
 

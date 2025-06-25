@@ -28,7 +28,7 @@ function Contact() {
                         <span className='absolute transitionContact1 transition-all inset-0 h-full duration-[500ms] w-[135vw] group-hover:w-[155vw] lg:group-hover:w-[145vw] xl:w-[100vw] xl:group-hover:w-[110vw]' />
                     </div>
                     <div className='relative sm:flex gap-3 justify-start py-2 items-center mt-8 text-xl group hidden'>
-                        <IoIosMail className='relative z-10 text-4xl' />
+                        <IoIosMail className='relative z-10 text-4xl bg-' />
                         <strong className='relative z-10 font-semibold'>Mail: </strong>
                         <div className="relative group flex flex-col items-center">
                             <button

@@ -1,8 +1,7 @@
 .transitionObject1, .transitionObject2, .transitionObject3 {
     position: absolute;
     inset: 0;
-    top: 20px;
-    height: 65vh;
+    height: 100%;
 }
 
 .transitionObject1 {
