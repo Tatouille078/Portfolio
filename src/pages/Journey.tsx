@@ -8,7 +8,7 @@ const Journey = () => {
     const [ringScale, setRingScale] = useState(250)
     const spinerRef = useRef(null)
 
-    
+
     useEffect(() => {
         // goofy ahhh code, but works 😎
         setRingScale(249)
@@ -35,22 +35,20 @@ const Journey = () => {
                                         BTS SIO - SLAM
                                     </h3>
                                     <h3 className="pb-1 font-semibold text-md bg-zinc-700 w-full text-gray-300">
-                                        IPSSI SQY - Grande École Informatique | Since Oct 2024
+                                        IPSSI SQY - Grande École Informatique | Depuis Oct 2024
                                     </h3>
                                     <p className="w-full bg-zinc-800 rounded-b-xl text-gray-200 p-2 py-3">
-                                        Currently pursuing a two-year technical degree in IT Services for Organizations, specializing in Software Solutions and Business Applications (SLAM).
-                                    </p>
+                                        Actuellement en BTS Services Informatiques aux Organisations, option Solutions Logicielles et Applications Métiers (SLAM).                                    </p>
                                 </div>
                                 <div className={`w-full flex text-center flex-col`}>
                                     <h3 className="py-1 font-semibold text-xl bg-zinc-700 rounded-t-xl w-full text-white">
-                                        General Baccalaureate
+                                        Baccalaureat général
                                     </h3>
                                     <h3 className="pb-1 font-semibold text-md bg-zinc-700 w-full text-gray-300">
-                                        La Queue-Lez-Yvelines | Oct 2023 - Jul 2024
+                                        La Queue-Lez-Yvelines | Oct 2023 - Juil 2024
                                     </h3>
                                     <p className="w-full bg-zinc-800 rounded-b-xl text-gray-200 p-2 py-3">
-                                        Obtained the French General Baccalaureate as an independent candidate, with a focus on Computer Science (NSI) and Mathematics.
-                                    </p>
+                                        Obtention du Baccalauréat Général en candidat libre, avec spécialités Numérique et Sciences Informatiques (NSI) et Mathématiques.                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -60,24 +58,23 @@ const Journey = () => {
                             <div className="h-full overflow-y-scroll flex flex-col pt-32 px-4 gap-y-10 pb-24">
                                 <div className={`w-full flex text-center flex-col`}>
                                     <h3 className="py-1 font-semibold text-xl bg-zinc-700 rounded-t-xl w-full text-white">
-                                        Polyvalent cook
+                                        Cuisinier polyvalent
                                     </h3>
                                     <h3 className="pb-1 font-semibold text-md bg-zinc-700 w-full text-gray-300">
-                                        TBJL SAS | Nov 2022 - Jul 2024
+                                        TBJL SAS | Nov 2022 - Juil 2024
                                     </h3>
                                     <p className="w-full bg-zinc-800 rounded-b-xl text-gray-200 p-2 py-3">
-                                        I worked as a versatile cook: prepared dishes, helped with order dispatch, and also handled deliveries sometimes. I made sure kitchen operations ran smoothly while staying flexible to meet different needs.
-                                    </p>
+                                        J'ai travaillé comme cuisinier polyvalent : préparation des plats, aide à l'envoi des commandes, et parfois en livraison. Je veillais au bon fonctionnement de la cuisine tout en restant flexible selon les besoins.                                    </p>
                                 </div>
                                 <div className={`w-full flex text-center flex-col`}>
                                     <h3 className="py-1 font-semibold text-xl bg-zinc-700 rounded-t-xl w-full text-white">
-                                        Internship - Front-end Developer
+                                        Stage - Front-end Developpeur
                                     </h3>
                                     <h3 className="pb-1 font-semibold text-md bg-zinc-700 w-full text-gray-300">
-                                        Fiesta Informatique | Apr 2025 - Jun 2025
+                                        Fiesta Informatique | Avr 2025 - Juin 2025
                                     </h3>
                                     <p className="w-full bg-zinc-800 rounded-b-xl text-gray-200 p-2 py-3">
-                                        I built the front-end architecture of an e-commerce website using React.js. I reorganized the project structure using GitHub Projects and designed the entire website on Figma. I also handled some back-end tasks, such as integrating Stripe for online payments and setting up promo code functionality.
+                                        J'ai développé l'architecture front-end d'un site e-commerce avec React.js. J'ai réorganisé la structure du projet via GitHub Projects et conçu l'ensemble du site sur Figma. J'ai aussi géré certaines tâches back-end, comme l'intégration de Stripe pour les paiements en ligne et la mise en place des codes promo.
                                     </p>
                                 </div>
                             </div>

@@ -170,9 +170,9 @@ function Project() {
                     <span className="w-[70vw] border-t-2 border-gray-300 mb-4"></span>
                     <div className="w-full max-w-[100vw] min-h-[190px] overflow-x-scroll overflow-y-hidden">
                         <div className={`h-full transition-all ease-out flex flex-row items-center min-w-max gap-x-4 pr-4 ${isTransitioning ? "pointer-events-none" : "pointer-events-auto"}`}>
-                            <h2 className="text-center self-center mx-8 font-semibold text-2xl">Personnal<br />projects :</h2>
+                            <h2 className="text-center self-center mx-8 font-semibold text-2xl">Projets<br />personnels :</h2>
                             <ProjectCard type="perso" onClick={handleTransitioning} />
-                            <h2 className="text-center self-center mx-8 ml-16 font-semibold text-2xl">School<br />projects :</h2>
+                            <h2 className="text-center self-center mx-8 ml-16 font-semibold text-2xl">Projets<br />d'études :</h2>
                             <ProjectCard type="school" onClick={handleTransitioning} />
                         </div>
                     </div>
