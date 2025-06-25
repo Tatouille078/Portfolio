@@ -1,6 +1,5 @@
 {
   "name": "portfolio",
-  "homepage": "https://tatouille078.github.io/Portfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -30,6 +30,7 @@
     "tailwindcss": "^3.4.17",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.2",
-    "vite": "^6.0.5"
+    "vite": "^6.0.5",
+    "vite-plugin-gh-pages": "^1.0.1"
   }
 }

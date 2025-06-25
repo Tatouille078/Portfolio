@@ -1,4 +1,4 @@
-import React, { ForwardedRef, forwardRef, useEffect, useRef } from 'react'
+import { ForwardedRef, forwardRef, useEffect, useRef } from 'react'
 
 type SpinerRefProps = {
     opa: number;
