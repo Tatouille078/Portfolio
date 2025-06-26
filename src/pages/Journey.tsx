@@ -5,13 +5,13 @@ import './Journey.css'
 
 const Journey = () => {    
 
-    const [ringScale, setRingScale] = useState(250)
+    const [ringScale, setRingScale] = useState(151)
     const spinerRef = useRef(null)
 
 
     useEffect(() => {
         // goofy ahhh code, but works 😎
-        setRingScale(249)
+        setRingScale(150)
         if (!spinerRef.current) return
     }, [spinerRef])
 

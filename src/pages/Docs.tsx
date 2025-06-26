@@ -38,7 +38,7 @@ const Docs: React.FC = () => {
                                     La documentation du projet php
                                 </h3>
                                 <div className='relative bg-zinc-800 rounded-b-xl z-10 flex justify-center items-center py-4 text-lg text-white px-4'>
-                                    <a href='https://api.cloudinary.com/v1_1/dxaxfy6sd/image/download?api_key=674615817582456&attachment=true&audit_context=eyJhY3Rvcl90eXBlIjoidXNlciIsImFjdG9yX2lkIjoiYjIyZThjMGFiM2Y2OGRhOTBkNjNlOTM0NDY5OTBlMzUiLCJ1c2VyX2V4dGVybmFsX2lkIjoiNTliYzQyYTY1MGUzMjZlOWIzMmZmMDQ1MDI4NjQzIiwidXNlcl9jdXN0b21faWQiOiJ0YXRvdWlsbGUubG9pY2tAZ21haWwuY29tIiwiY29tcG9uZW50IjoiY29uc29sZSJ9&public_id=Comment_faire_un_git_revert_mp4vyx&signature=961e4574cd80676d5b92c724858f3a66a6010b23&source=ml&target_filename=Comment_faire_un_git_revert_mp4vyx&timestamp=1750966955&type=upload' download className="relative group gap-3 flex hover:cursor-pointer justify-center items-center">
+                                    <a href='/Portfolio/Tableau_de_synthese.pdf' download className="relative group gap-3 flex hover:cursor-pointer justify-center items-center">
                                         <CiLink className='text-3xl mix-blend-difference' />
                                         <p className='font-semibold mix-blend-difference group-hover:underline transition-all'>Télécharger la doc</p>
                                         <span className="absolute h-10 headerHover1 transition-all w-[120%] group-hover:w-[140%] -translate-x-6 duration-[350ms] -z-10"></span>
