@@ -110,7 +110,7 @@ function Project() {
                         <div className="flex flex-col items-center gap-y-8 px-2 mx-2 overflow-y-scroll overflow-x-hidden max-h-[60vh] py-2 rounded-xl border-2"
                             style={{ borderColor: currentProject?.titleColor }}
                         >
-                            <img src={currentProject?.images[0]} alt="" className="rounded-xl" />
+                            <img src={currentProject?.images[0]} alt="image1" className="rounded-xl" loading="lazy" />
                             <div className="col-start-2 col-end-4 flex flex-col text-center items-center">
                                 <h2 className="relative text-2xl font-semibold z-10 py-1"
                                     style={{ color: currentProject?.textColor }}
@@ -127,7 +127,7 @@ function Project() {
                                     />
                                 </p>
                             </div>
-                            <img src={currentProject?.images[1]} alt="" className="rounded-xl" />
+                            <img src={currentProject?.images[1]} alt="image2" className="rounded-xl" loading="lazy" />
                             <div className="flex flex-col text-center items-center">
                                 <h2 className="relative text-2xl font-semibold z-10 py-2"
                                     style={{ color: currentProject?.textColor }}

@@ -15,7 +15,7 @@ type SpinerProps = {
     inversed?: boolean;
 }
 
-const Spiner = forwardRef<HTMLDivElement, SpinerProps>(({ className = "", count = 12, revolution = 3, scale = 150, inversed = false }, ref: ForwardedRef<HTMLDivElement | null>) => {
+const Spiner = forwardRef<HTMLDivElement, SpinerProps>(({ className = "", count = 12, revolution = 3, scale = 150, inversed = false }, ref?: ForwardedRef<HTMLDivElement | null>) => {
 
     const spinerStyle = useRef<SpinerRefProps[]>([]);
 

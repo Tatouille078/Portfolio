@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Spiner from "../components/Spiner";
 import './Journey.css'
 
-const Journey = () => {
+const Journey = () => {    
 
     const [ringScale, setRingScale] = useState(250)
     const spinerRef = useRef(null)
@@ -13,8 +13,6 @@ const Journey = () => {
         // goofy ahhh code, but works 😎
         setRingScale(249)
         if (!spinerRef.current) return
-        const timer = setTimeout(() => setRingScale(150), 0);
-        return () => clearTimeout(timer)
     }, [spinerRef])
 
     return (
@@ -38,7 +36,7 @@ const Journey = () => {
                                         IPSSI SQY - Grande École Informatique | Depuis Oct 2024
                                     </h3>
                                     <p className="w-full bg-zinc-800 rounded-b-xl text-gray-200 p-2 py-3">
-                                        Actuellement en BTS Services Informatiques aux Organisations, option Solutions Logicielles et Applications Métiers (SLAM).                                    </p>
+                                        Actuellement en BTS Services Informatiques aux Organisations, option Solutions Logicielles et Applications Métiers (SLAM).</p>
                                 </div>
                                 <div className={`w-full flex text-center flex-col`}>
                                     <h3 className="py-1 font-semibold text-xl bg-zinc-700 rounded-t-xl w-full text-white">
@@ -48,7 +46,7 @@ const Journey = () => {
                                         La Queue-Lez-Yvelines | Oct 2023 - Juil 2024
                                     </h3>
                                     <p className="w-full bg-zinc-800 rounded-b-xl text-gray-200 p-2 py-3">
-                                        Obtention du Baccalauréat Général en candidat libre, avec spécialités Numérique et Sciences Informatiques (NSI) et Mathématiques.                                    </p>
+                                        Obtention du Baccalauréat Général en candidat libre, avec spécialités Numérique et Sciences Informatiques (NSI) et Mathématiques.</p>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +62,7 @@ const Journey = () => {
                                         TBJL SAS | Nov 2022 - Juil 2024
                                     </h3>
                                     <p className="w-full bg-zinc-800 rounded-b-xl text-gray-200 p-2 py-3">
-                                        J'ai travaillé comme cuisinier polyvalent : préparation des plats, aide à l'envoi des commandes, et parfois en livraison. Je veillais au bon fonctionnement de la cuisine tout en restant flexible selon les besoins.                                    </p>
+                                        J'ai travaillé comme cuisinier polyvalent : préparation des plats, aide à l'envoi des commandes, et parfois en livraison. Je veillais au bon fonctionnement de la cuisine tout en restant flexible selon les besoins.</p>
                                 </div>
                                 <div className={`w-full flex text-center flex-col`}>
                                     <h3 className="py-1 font-semibold text-xl bg-zinc-700 rounded-t-xl w-full text-white">

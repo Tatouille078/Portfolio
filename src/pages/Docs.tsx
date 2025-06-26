@@ -10,7 +10,6 @@ const Docs: React.FC = () => {
 
     useEffect(() => {
         // goofy ahhh code, but works 😎
-        setRingScale(101)
         if (!spinerRef.current) return
         const timer = setTimeout(() => setRingScale(100), 0);
         return () => clearTimeout(timer)
@@ -18,10 +17,10 @@ const Docs: React.FC = () => {
 
     return (
         <div className="lg:h-screen flex flex-col items-center text-gray-100 bg-gradient-to-tr from-zinc-900 via-zinc-900 via-85% to-zinc-800 relative overflow-hidden">
-            <div className="absolute lg:top-1/2 top-1/4 -left-[450px]">
+            <div className="absolute lg:top-1/2 top-[15%] -left-[450px]">
                 <Spiner count={35} revolution={5} scale={ringScale} className="opacity-75" ref={spinerRef} />
             </div>
-            <div className="absolute lg:top-1/2 top-3/4 -right-[450px]">
+            <div className="absolute lg:top-1/2 top-[85%] -right-[450px]">
                 <Spiner count={35} revolution={5} scale={ringScale} className="opacity-75" ref={spinerRef} />
             </div>
             <Header />
@@ -39,7 +38,7 @@ const Docs: React.FC = () => {
                                     La documentation du projet php
                                 </h3>
                                 <div className='relative bg-zinc-800 rounded-b-xl z-10 flex justify-center items-center py-4 text-lg text-white px-4'>
-                                    <a href='src\assets\docs\Comment_faire_un_git_revert.pdf' download className="relative group gap-3 flex hover:cursor-pointer justify-center items-center">
+                                    <a href='https://api.cloudinary.com/v1_1/dxaxfy6sd/image/download?api_key=674615817582456&attachment=true&audit_context=eyJhY3Rvcl90eXBlIjoidXNlciIsImFjdG9yX2lkIjoiYjIyZThjMGFiM2Y2OGRhOTBkNjNlOTM0NDY5OTBlMzUiLCJ1c2VyX2V4dGVybmFsX2lkIjoiNTliYzQyYTY1MGUzMjZlOWIzMmZmMDQ1MDI4NjQzIiwidXNlcl9jdXN0b21faWQiOiJ0YXRvdWlsbGUubG9pY2tAZ21haWwuY29tIiwiY29tcG9uZW50IjoiY29uc29sZSJ9&public_id=Comment_faire_un_git_revert_mp4vyx&signature=961e4574cd80676d5b92c724858f3a66a6010b23&source=ml&target_filename=Comment_faire_un_git_revert_mp4vyx&timestamp=1750966955&type=upload' download className="relative group gap-3 flex hover:cursor-pointer justify-center items-center">
                                         <CiLink className='text-3xl mix-blend-difference' />
                                         <p className='font-semibold mix-blend-difference group-hover:underline transition-all'>Télécharger la doc</p>
                                         <span className="absolute h-10 headerHover1 transition-all w-[120%] group-hover:w-[140%] -translate-x-6 duration-[350ms] -z-10"></span>
@@ -56,7 +55,7 @@ const Docs: React.FC = () => {
                                     Documentation pour faire un git revert clean
                                 </h3>
                                 <div className='relative bg-zinc-800 rounded-b-xl z-10 flex justify-center items-center py-4 text-lg text-white px-4'>
-                                    <a href='src\assets\docs\Comment_faire_un_git_revert.pdf' download className="relative group gap-3 flex hover:cursor-pointer justify-center items-center">
+                                    <a href='https://api.cloudinary.com/v1_1/dxaxfy6sd/image/download?api_key=674615817582456&attachment=true&audit_context=eyJhY3Rvcl90eXBlIjoidXNlciIsImFjdG9yX2lkIjoiYjIyZThjMGFiM2Y2OGRhOTBkNjNlOTM0NDY5OTBlMzUiLCJ1c2VyX2V4dGVybmFsX2lkIjoiNTliYzQyYTY1MGUzMjZlOWIzMmZmMDQ1MDI4NjQzIiwidXNlcl9jdXN0b21faWQiOiJ0YXRvdWlsbGUubG9pY2tAZ21haWwuY29tIiwiY29tcG9uZW50IjoiY29uc29sZSJ9&public_id=Documentation_tp_php_yqfx5k&signature=1279074fbc51ac8cab291a9e3ab22f61fa4fe403&source=ml&target_filename=Documentation_tp_php_yqfx5k&timestamp=1750967012&type=upload' download className="relative group gap-3 flex hover:cursor-pointer justify-center items-center">
                                         <CiLink className='text-3xl mix-blend-difference' />
                                         <p className='font-semibold mix-blend-difference group-hover:underline transition-all'>Télécharger la doc</p>
                                         <span className="absolute h-10 headerHover1 transition-all w-[120%] group-hover:w-[140%] -translate-x-6 duration-[350ms] -z-10"></span>
@@ -96,7 +95,7 @@ const Docs: React.FC = () => {
                                     Tableau de synthèse
                                 </h3>
                                 <div className='relative bg-zinc-800 rounded-b-xl z-10 flex justify-center items-center py-4 text-lg text-white px-4'>
-                                    <a href='src\assets\docs\Tableau_de_synthese.pdf' download className="relative group gap-3 flex hover:cursor-pointer justify-center items-center">
+                                    <a href='https://api.cloudinary.com/v1_1/dxaxfy6sd/image/download?api_key=674615817582456&attachment=true&audit_context=eyJhY3Rvcl90eXBlIjoidXNlciIsImFjdG9yX2lkIjoiYjIyZThjMGFiM2Y2OGRhOTBkNjNlOTM0NDY5OTBlMzUiLCJ1c2VyX2V4dGVybmFsX2lkIjoiNTliYzQyYTY1MGUzMjZlOWIzMmZmMDQ1MDI4NjQzIiwidXNlcl9jdXN0b21faWQiOiJ0YXRvdWlsbGUubG9pY2tAZ21haWwuY29tIiwiY29tcG9uZW50IjoiY29uc29sZSJ9&public_id=Tableau_de_synthese_yzntlu&signature=7ec7dc6227dd4d70fa8c420a4898d53bb9861878&source=ml&target_filename=Tableau_de_synthese_yzntlu&timestamp=1750966762&type=upload' download className="relative group gap-3 flex hover:cursor-pointer justify-center items-center">
                                         <CiLink className='text-3xl mix-blend-difference' />
                                         <p className='font-semibold mix-blend-difference group-hover:underline transition-all'>Le télécharger</p>
                                         <span className="absolute h-10 headerHover1 transition-all w-[120%] group-hover:w-[140%] -translate-x-6 duration-[350ms] -z-10"></span>
